@@ -1,0 +1,4527 @@
+*,
+*:before,
+*:after {
+
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 100%;
+}
+
+body {
+margin: 0;
+    background: #f5f5f5;
+    max-width: 100%;
+}
+
+.logo_img {
+    width: 100%;
+    margin: 20px 0 0 10px;
+}
+
+.whatsapp-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  z-index: 9999;
+  background-color: #25D366;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='%23FFF' d='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z'/%3e%3c/svg%3e");    
+  background-size: 50%; 
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.whatsapp-button:before,
+.whatsapp-button:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  border: 50%;
+  border: 1px solid #25D366;
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  animation: border-animate 1.5s linear infinite;
+  opacity: 0;
+}
+.whatsapp-button:after{
+  animation-delay: .5s;
+}
+@keyframes border-animate
+{
+  0% {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1.2);
+      opacity: 0;
+  }
+}
+
+.logo_text {
+    font-family: 'Nunito Sans',  "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+    color: #000;
+}
+
+.title_link {
+    font-size: 3rem;
+    color: #faa519;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.color {
+    color: #faa519;
+}
+
+.color-f {
+    color: #8b95ff;
+}
+
+.container {
+    position: relative;
+}
+
+.telef {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.telef_btn {
+    border: #cccccc;
+    margin-bottom: 5px;
+}
+
+.telef1 {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Nunito Sans',  "Arial", sans-serif;
+    font-weight: 700;
+}
+
+.heder_inner {
+    display: flex;
+    position: relative;
+    width: 100%;
+
+}
+
+.heder_inner-menu {/*значок логотипа и текст "Служба заказа легкового транспорта" - стоят в один ряд*/
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0.5rem;
+}
+
+.heder_inner-logo {
+    width: 70px;
+}
+
+.logo_img-footer {
+  margin-bottom: 20px;
+
+}
+
+.heder_inner-text {
+    margin-left: 2rem;
+    text-align: left;
+}
+
+.heder_inner-button {
+position: absolute;
+right: 1rem;
+}
+
+
+.btn {
+position: relative;
+vertical-align: top;
+box-shadow: 0.5rem 0.5rem #000;
+background: #8b95ff;
+border-radius: 1.5rem;
+border-radius: 5rem;
+cursor: pointer; 
+}
+
+.btn-primary {
+  padding: 1rem 1.5rem;
+}
+
+
+.button{
+    font-family: 'Unbounded', "Arial", sans-serif;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+.button-img {
+position: absolute;
+
+}
+
+.intro_inner {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+
+
+.intro_photo {
+    position: absolute;
+}
+
+h1 {
+    font-family: 'Unbounded', "Arial", sans-serif;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Unbounded', "Arial", sans-serif;
+    color: #8b95ff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.slogan {
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.slogan-title {
+    color: #000;
+}
+
+.slogan-text {
+	font-size: 32px;
+}
+
+.slogan-text-2 {
+    font-size: 32px;
+    margin-left: 450px;
+}
+
+.btn-ili {
+
+    vertical-align: top;
+    width: 12rem;
+    height: 4rem;
+    background: #fff;
+    border-radius: 2.5rem;
+    font-family: 'Unbounded', "Arial", sans-serif;
+    border: 1px solid;
+    border-color: #bfbbbb;
+    color: #000;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    transform: rotate(-12deg);
+    z-index: 1;
+}
+
+.btn-ili:hover {
+    transform: rotate(25deg);
+}
+
+.btn-iz {
+
+    vertical-align: top;
+
+    background: #fff;
+    border-radius: 2.5rem;
+    font-family: 'Unbounded', "Arial", sans-serif;
+
+    color: #000;
+    font-weight: 300;
+    text-transform: uppercase;
+    transform: rotate(5deg);
+    padding: 0.5rem 1rem;
+    margin-left: 26rem;
+    margin-top: -0.1rem;
+    z-index: 1;
+    border: 1px solid;
+    border-color: #bfbbbb;
+}
+
+.btn-iz:hover {
+    transform: rotate(20deg);
+}
+
+.squares {/*КАРТОЧКИ С ГОРОДАМИ И ЦЕНАМИ*/
+    display: grid;
+    flex: none;
+    gap: 16px;
+    grid-auto-rows: min-content;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+.square_1, .square_2, .square_3, .square_4 {
+    border-bottom-width: 1px;
+    border-color: #bfbbbb;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-style: solid;
+    border-top-width: 1px;
+    align-content: center;
+    align-items: center;
+    align-self: start;
+    background-color: #EBEBEB;
+    border-radius: 16px;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0px;
+    justify-content: flex-start;
+    justify-self: start;
+    overflow: hidden;
+    position: relative;
+    transform: perspective(1200px);
+    width: 100%;
+    will-change: transform;
+}
+
+h3 {
+    font-family: 'Nunito Sans',  "Arial", sans-serif;
+    color: #262424;
+
+    font-weight: 600;
+
+
+}
+
+.psquare { 
+    font-family: 'Nunito Sans',  "Arial", sans-serif;
+    color: #262424;
+    font-weight: normal;
+
+}
+
+
+.marquee-container {/*переполнение контейнера скрыто*/
+
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 20px;
+    width: 100%;
+    background: #EBEBEB;
+
+}
+
+.marquee-container:before,
+.marquee-container:after {
+  content: "";
+  height: 100%;
+  top: 0;
+  width: 10%;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.items {
+  flex-shrink: 0;
+  display: flex;
+  gap: 20px;
+  counter-reset: item;
+  justify-content: space-around;
+  min-width: 100%;
+}
+.item {
+
+  flex: 0 0 auto;
+  border-radius: 15%;
+  border: 0.1rem solid #000;
+  counter-increment: item;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0.5rem;
+  transition: all 0.1s ease-in-out;
+}
+.item:hover {
+  transform: scale(1.05);
+
+}
+
+.item:before {
+  content: counter(item);
+}
+
+.marquee {
+  animation: scroll 20s linear infinite;
+}
+
+.marquee-container:hover .marquee {
+  animation-play-state: paused;
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+.map {
+    display: flex;
+    position: relative;
+}
+
+.container_map {
+    margin-top: 3rem;
+}
+
+.map {
+
+    background: #90ddff;
+    border: 0.1rem solid #000;
+
+}
+
+.map-item {
+position: absolute;
+
+background: #ffffff;
+margin-top: 3rem;
+border-radius: 5%;
+}
+
+.map-text {
+    font-family: 'Nunito Sans',  "Arial", sans-serif;
+    color: #000;
+    font-weight: 300;
+width: 60%;
+  letter-spacing: 2px;
+}
+
+.container_pusto {
+    height: 50px;
+}
+
+
+
+
+#contact {
+  width: 100%;
+  height: 100%;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  font: 700 26px;
+  font-family: 'Unbounded', "Arial", sans-serif;
+  color: #8B95FF;
+  letter-spacing: 6px;
+}
+
+.contact-wrapper {
+  display: grid;
+  flex: none;
+  gap: 16px;
+  grid-auto-rows: min-content;
+  height: min-content;
+  justify-content: center;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.contact-wrapper_footer {
+  display: grid;
+  flex: none;
+  gap: 16px;
+  grid-auto-rows: min-content;
+  height: min-content;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Left contact page */
+.contact-form {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0px;
+  justify-content: flex-start;
+  justify-self: start;
+  overflow: hidden;
+  font-family: 'Unbounded',"Arial", sans-serif;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+
+input {
+  all: unset;
+}
+
+input[type="text"]
+{
+
+  font-family: 'Nunito Sans',  "Arial", sans-serif;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+input[type="tel"]
+{
+
+  font-family: 'Nunito Sans',  "Arial", sans-serif;
+  padding-left: 10px;
+    margin-top: 5px;
+}
+
+input:focus,
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+transition: background-color 600000s 0s, color 600000s 0s;
+border: 2px solid #8B95FF;
+}
+
+.form-control {
+
+  display:block;
+  margin:0 auto;
+  width: 90%;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  border: #bfbbbb 1px solid;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
+}
+
+label {
+  margin-left: 25px;
+}
+
+.form-control-textarea {
+  display:block;
+  margin:0 auto;
+  width: 90%;
+  margin-top: 5px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  border: #bfbbbb 1px solid;
+}
+
+textarea {
+  resize: none;
+  font-size: 16px;
+  font-family: 'Nunito Sans',  "Arial", sans-serif;
+  padding-left: 10px;
+  padding-top: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 60px;
+  min-height: 60px;
+
+}
+
+textarea:focus {
+  outline: none !important;
+  border: 2px solid #8B95FF;
+}
+
+fieldset {
+  background-color: #f9ed87;
+  border-radius: 30px;
+}
+
+.col-sm-12 {
+  margin-top: 30px;
+}
+
+.col-sm-13 {
+  margin-top: 40px;
+}
+
+.send-text {
+  letter-spacing: 2px;
+  color: #000;
+
+}
+
+.send-button {
+  display:block;
+  margin:0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0px;
+  justify-content: flex-start;
+  justify-self: start;
+  overflow: hidden;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+
+}
+
+.contact-container_footer {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0px;
+  justify-content: flex-start;
+  justify-self: start;
+  overflow: hidden;
+}
+
+.contact-list_footer {
+  list-style-type: none;
+
+}
+
+.list-item {
+  color: #bfbbbb;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.contact-text {
+    font-family: 'Nunito Sans',  "Arial", sans-serif;
+  width: 100%;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+
+.preimushchestva{
+    margin: 60px 0 60px 0;
+}
+
+
+.preimushchestva-container {
+    display: grid;
+    margin: 0 10px 0 10px;
+}
+
+.preimushchestva-wrapper {
+    justify-self: center;
+	align-self: center;
+	background-color: #EBEBEB;
+	border-radius: 16px;
+	border-bottom-width: 1px;
+    border-color: #bfbbbb;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-style: solid;
+    border-top-width: 1px;
+}
+
+.preimushchestva-grid {
+	display: grid;
+    flex: none;
+    gap: 15px;
+    grid-auto-rows: min-content;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.preimushchestva-img {
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0px;
+    justify-content: flex-start;
+    justify-self: start;
+    overflow: hidden;
+    position: relative;
+    transform: perspective(1200px);
+    width: 100%;
+    will-change: transform;
+}
+
+.img-preimushchestva {
+    width: 60%;
+    justify-self: center;
+	align-self: center;
+	margin: 20px;
+}
+                        
+.preimushchestva-text {
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0px;
+    justify-content: flex-start;
+    justify-self: start;
+    overflow: hidden;
+    position: relative;
+    transform: perspective(1200px);
+    width: 100%;
+    will-change: transform;
+}
+
+.preimushchestva-text-1 {
+  font-family: 'Nunito Sans',  "Arial", sans-serif;
+  width: 100%;
+  color: #8b95ff;
+  font-weight: 800;
+  margin: 20px 0 20px 0;
+  padding: 0 10px 0 0;
+}
+
+.preimushchestva-text-2 {
+  font-family: 'Nunito Sans',  "Arial", sans-serif;
+  width: 100%;
+  color: #000;
+  font-weight: 300;
+  margin: 0 20px 30px 0;
+  padding: 0 20px 0 0;
+}
+
+.title-1 {
+    font-family: 'Unbounded', "Arial", sans-serif;
+    color: #000;
+    font-weight: 400;
+    margin: 50px 10px 50px 10px;
+    max-width: 850px;
+    justify-self: center;
+	align-self: center;
+}
+
+.title-2 {
+    font-family: 'Unbounded', "Arial", sans-serif;
+    color: #000;
+}
+
+.contact-text_footer {
+    font-family: 'Nunito Sans',  "Arial", sans-serif;
+  width: 100%;
+  color: #000;
+  letter-spacing: 2px;
+} 
+
+.place {
+  font-family: 'Nunito Sans',  "Arial", sans-serif;
+  font-weight: 300;
+}
+
+.place_footer{
+font-family: 'Nunito Sans',  "Arial", sans-serif;
+
+  font-size: 18px;
+    font-weight: 300;
+}
+
+
+
+.phone {
+font: 300;
+font-family: 'Unbounded', "Arial", sans-serif;
+}
+
+.phone2 {
+font: 300 24px;
+font-family: 'Unbounded', "Arial", sans-serif;
+margin-left: -20px;
+}
+
+.gmail {
+font: 300;
+font-family: 'Unbounded', "Arial", sans-serif;
+}
+
+.container_footer {
+
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 20px;
+  
+
+  background: #EBEBEB;
+
+}
+  
+.contact-text_footer a {
+  color: #8B95FF;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text_footer a:hover {
+  color: #90ddff;
+  text-decoration: none;
+}
+
+
+/* Social Media Icons */
+.social-media-list {
+  list-style-type: none;
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  text-align: center;
+}
+
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative; 
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #8B95FF;
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+
+/*.social-media-list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #000;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #8B95FF; 
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}*/
+
+
+.icon-instagram {
+  vertical-align: middle;
+  margin-top: -4px;
+  max-width: 70%;
+}
+
+.logo-container_footer {
+display: flex;
+  flex: none;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+}
+
+.logo_footer-h2 {
+      margin-top: 15px;
+}
+
+
+
+/* Smartphones (вертикальная ориентация) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 479px) {/*для мобильных экранов*/
+
+
+    .logo_text {
+        font-size: 16px;
+    }
+    
+    .heder_inner-text {
+        max-width: 60%;
+        margin-top: 15px;
+    }
+    
+    .heder_inner-button {
+    top: 10rem;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+
+    
+}
+
+.btn-primary {
+
+    width: 280px;
+    height: 70px;
+    border-radius: 5rem;
+
+}
+
+.button {
+    font-size: 16px;
+    margin-left: -2px;
+}
+
+.button-img {
+    top: 2rem;
+    right: 2rem;
+    width: 4rem;
+}
+
+/*.btn-ili-iz {
+position: absolute;
+    margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+}*/
+
+.btn-ili {
+    margin-top: 5px;
+    margin-left: 120px;
+    font-size: 22px;
+    width: 120px;
+    height: 50px;
+    
+    
+  }
+  .btn-iz {
+      margin-top: 0.6rem;
+      margin-left: 20px;
+      font-size: 22px;
+    width: 280px;
+    height: 50px;
+    }
+
+h1,.title-2 {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+    .title {
+text-align: center;
+        font-size: 24px;
+        margin-bottom: 34px;
+    
+    }
+    
+        .title-1 {
+text-align: center;
+        font-size: 20px;
+    }
+
+.slogan {
+    margin-top: 22rem;
+}
+
+.slogan-text {
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+.slogan-text-2 {
+    font-size: 22px;
+    line-height: 1.8;
+    margin-left: 50px;
+}
+
+.intro_inner {
+margin-top: 10rem;
+}
+
+.squares {/*КАРТОЧКИ С ГОРОДАМИ И ЦЕНАМИ*/
+    grid-template-columns: repeat(1,minmax(200px,1fr));
+    grid-template-rows: repeat(2,min-content);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 7rem;
+}
+
+.square_1, .square_2 {
+    align-self: unset;
+    padding: 0 10px 0 10px; 
+}
+
+.square_3, .square_4 {
+    align-self: unset;
+    padding: 0 10px 0 10px;
+
+}
+
+
+.container_square-img {
+    position: relative;
+    margin-top: 60px;
+
+}
+
+.square-img-1{
+    width: 350px;
+    position: absolute;
+    left: -50px;
+
+}
+
+.square-img-2{
+    width: 270px;
+    position: absolute;
+    top: 50px;
+}
+
+.square-img-3{
+    width: 180px;
+    position: absolute;
+    right: 10px;
+}
+
+
+h3 {
+
+    font-size: 22px;
+    }
+
+.phone {
+    font-size: 24px;
+}
+
+.gmail {
+    font-size: 16px;
+}
+
+.psquare { 
+
+    font-size: 18px;
+}
+
+    
+    .intro_content {
+    width: 100%;
+    
+
+}
+    
+    .intro_photo {
+    top: 16rem;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+    width: 100%;
+
+}
+
+ label {
+      font-size: 16px;
+    }
+    
+    input[type="text"]
+{
+  font-size: 16px;
+
+}
+
+input[type="tel"]
+{
+  font-size: 16px;
+
+}
+.preimushchestva-wrapper {
+    width: 100%;
+}
+
+.preimushchestva-grid {
+    grid-template-columns: repeat(1,minmax(200px,1fr));
+    margin-right: 20px;
+    gap: 0;
+}
+
+.img-preimushchestva {
+    width: 30%;
+}
+
+.preimushchestva-text-1 {
+    font-size: 22px;
+    margin: 0 20px 30px 20px;
+    padding: 0 30px 0 0;
+}
+
+.preimushchestva-text-2 {
+    font-size: 20px;
+    margin: 0 20px 30px 20px;
+    padding: 0 30px 0 0;
+}
+
+ .place {
+  font-size: 20px;
+ }
+
+      .marquee-container {
+        height: 15rem;
+    }
+
+      .item {
+        width: 15rem;
+        height: 10rem;
+        margin: 3rem 0.5rem;
+      }
+      
+      .container_map {
+    margin-top: 2rem;
+margin-left: 10px;
+}
+      
+      .map {
+        width: 100%;
+        height: 83rem;
+      }
+
+      .map-text {          margin-left: 20px;
+    width: 90%;   
+    font-size: 20px;
+  letter-spacing: 2px;
+  
+    }
+    
+          .map-item {
+
+top: 57rem;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+width: 90%;
+height: 20rem;
+}
+
+ul {
+    margin-left: -20px;
+}
+
+.contact-list_footer {
+    margin-left: -20px;
+}
+
+
+
+.contact-container_footer {
+    max-width: 300px;
+}
+
+.section-header {
+  padding: 100px 0 40px 0;
+}
+
+
+.contact-wrapper {
+    padding: 0 10px 0 10px;
+}
+
+.contact-form {
+  grid-template-columns: repeat(1,minmax(200px,1fr));
+  grid-template-rows: repeat(2,min-content);
+  width: 320px;
+  margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+}
+
+.form-control {
+  height: 60px;  
+}
+
+.send-button {
+  height: 60px;
+  width: 220px;
+}
+
+.send-text {
+  font: 700 14px;
+  font-family: 'Unbounded', "Arial", sans-serif;
+}
+
+.phone2 {
+    font-size: 20px;
+    
+}
+
+
+.container_footer {
+  padding-top: 30px;
+}
+
+.logo-container_footer {
+    width: 90%;
+}
+
+.logo_img-footer {
+  width: 70%;
+}
+
+}
+
+/* Smartphones (горизонтальная ориентация) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 479px) and (orientation: landscape) {/*для мобильных экранов*/
+    
+
+    .logo_text {
+        font-size: 16px;
+    }
+    
+    .heder_inner-text {
+        max-width: 60%;
+        
+        margin-top: 15px;
+    }
+    
+    .heder_inner-button {
+    top: 10rem;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+
+    
+}
+
+.btn-primary {
+
+    width: 280px;
+    height: 70px;
+    border-radius: 5rem;
+}
+
+.button {
+    font-size: 16px;
+    margin-left: -2px;
+}
+
+.button-img {
+    top: 2rem;
+    right: 2rem;
+    width: 4rem;
+}
+
+/*.btn-ili-iz {
+    position: absolute;
+    margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+}*/
+
+.btn-ili {
+    margin-top: 5px;
+    margin-left: 120px;
+    font-size: 22px;
+    width: 120px;
+    height: 50px;
+    
+    
+  }
+  
+  .btn-iz {
+      margin-top: 0.6rem;
+      margin-left: 20px;
+      font-size: 22px;
+    width: 280px;
+    height: 50px;
+    }
+
+h1,.title-2 {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+    .title {
+text-align: center;
+        font-size: 24px;
+        margin-bottom: 34px;
+    }
+    
+    .title-1 {
+text-align: center;
+        font-size: 20px;
+    }
+
+.intro_inner {
+margin-top: 10rem;
+}
+
+.slogan {
+    margin-top: 22rem;
+}
+
+.slogan-text {
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+.slogan-text-2 {
+    font-size: 22px;
+    line-height: 1.8;
+    margin-left: 50px;
+}
+
+
+
+.squares {/*КАРТОЧКИ С ГОРОДАМИ И ЦЕНАМИ*/
+    grid-template-columns: repeat(1,minmax(200px,1fr));
+    grid-template-rows: repeat(2,min-content);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 18rem;
+}
+
+.square_1, .square_2 {
+    align-self: unset;
+    padding: 0 10px 0 10px; 
+}
+
+.square_3, .square_4 {
+    align-self: unset;
+    padding: 0 10px 0 10px;
+
+}
+
+
+.container_square-img {
+    position: relative;
+    margin-top: 60px;
+
+}
+
+.square-img-1{
+    width: 350px;
+    position: absolute;
+    left: -50px;
+
+}
+
+.square-img-2{
+    width: 270px;
+    position: absolute;
+    top: 50px;
+}
+
+.square-img-3{
+    width: 180px;
+    position: absolute;
+    right: 10px;
+}
+
+
+h3 {
+
+    font-size: 22px;
+    
+
+}
+
+.psquare { 
+
+    font-size: 18px;
+}
+
+.phone {
+    font-size: 24px;
+}
+
+.gmail {
+    font-size: 16px;
+}
+    .intro_content {
+    width: 100%;
+
+}
+    
+    .intro_photo {
+    top: 16rem;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+    width: 100%;
+
+}
+
+ label {
+      font-size: 16px;
+    }
+    
+    input[type="text"]
+{
+  font-size: 16px;
+
+}
+
+input[type="tel"]
+{
+  font-size: 16px;
+
+}
+
+.preimushchestva-wrapper {
+    width: 100%;
+}
+
+.preimushchestva-grid {
+    grid-template-columns: repeat(1,minmax(200px,1fr));
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.img-preimushchestva {
+    width: 30%;
+}
+
+.preimushchestva-text-1 {
+    font-size: 20px;
+    margin: 0 20px 30px 20px;
+    padding: 0 30px 0 0;
+}
+
+.preimushchestva-text-2 {
+    font-size: 20px;
+    margin: 0 20px 30px 20px;
+    padding: 0 30px 0 0;
+}
+
+ .place {
+  font-size: 20px;
+ }
+
+      .marquee-container {
+        height: 15rem;
+    }
+
+      .item {
+        width: 15rem;
+        height: 10rem;
+        margin: 3rem 0.5rem;
+      }
+      
+      .container_map {
+    margin-top: 2rem;
+margin-left: 10px;
+}
+      
+      .map {
+        width: 100%;
+        height: 83rem;
+      }
+
+      .map-text {          margin-left: 20px;
+    width: 90%;   
+    font-size: 20px;
+  letter-spacing: 2px;
+    }
+    
+          .map-item {
+
+top: 57rem;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+width: 90%;
+height: 20rem;
+}
+
+.contact-container_footer {
+    max-width: 300px;
+}
+
+ul {
+    margin-left: -20px;
+}
+
+.section-header {
+  padding: 100px 0 40px 0;
+}
+
+.contact-wrapper {
+    padding: 0 10px 0 10px;
+}
+
+.contact-form {
+  grid-template-columns: repeat(1,minmax(200px,1fr));
+  grid-template-rows: repeat(2,min-content);
+  width: 320px;
+  margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+}
+
+.form-control {
+  height: 60px;  
+}
+
+.send-button {
+  height: 60px;
+  width: 220px;
+}
+
+.send-text {
+  font: 700 14px;
+  font-family: 'Unbounded', "Arial", sans-serif;
+}
+
+.contact-list_footer {
+    margin-left: -20px;
+}
+
+.container_footer {
+  padding-top: 30px;
+}
+
+.phone2 {
+    font-size: 20px;
+    
+}
+
+
+.logo-container_footer {
+    width: 90%;
+}
+
+.logo_img-footer {
+  width: 70%;
+}
+
+}
+
+/* Smartphones (горизонтальная) ----------- */
+@media only screen and (min-width: 321px) {
+/* стили */
+
+
+}
+ 
+/* Smartphones (вертикальная) ----------- */
+@media only screen and (max-width: 319px) {
+/* стили */
+
+      .logo_text {
+        font-size: 14px;
+    }
+    
+        .heder_inner-text {
+
+        margin-left: 10px;
+    }
+    
+        .heder_inner-button {
+    top: 12rem;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+
+    
+}
+
+.btn-primary {
+
+    width: 280px;
+    height: 50px;
+    border-radius: 5rem;
+
+}
+
+.button {
+    font-size: 16px;
+}
+
+.button-img {
+    top: 2rem;
+    right: 2rem;
+    width: 4rem;
+}
+
+.btn-ili {
+    margin-top: 10px;
+    margin-left: 100px;
+    font-size: 18px;
+    width: 120px;
+    height: 50px;
+    
+    
+  }
+  .btn-iz {
+      margin-top: 0.6rem;
+      margin-left: 10px;
+      font-size: 18px;
+    width: 260px;
+    height: 50px;
+    }
+
+h1,.title-2 {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+    .title {
+text-align: center;
+        font-size: 24px;   
+    margin-bottom: 34px;
+    }
+    
+    .title-1 {
+text-align: center;
+        font-size: 20px;
+    }
+ 
+    .intro_content {
+    width: 100%;
+    margin-top: 130px;
+
+}
+    
+    .intro_photo {
+    top: 24rem;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+    width: 100%;
+
+}
+
+
+.squares {/*КАРТОЧКИ С ГОРОДАМИ И ЦЕНАМИ*/
+    grid-template-columns: repeat(1,minmax(200px,1fr));
+    grid-template-rows: repeat(2,min-content);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 13rem;
+}
+
+
+
+.square_1, .square_2 {
+    align-self: unset;
+    padding: 0 10px 0 10px; 
+}
+
+.square_3, .square_4 {
+    align-self: unset;
+    padding: 0 10px 0 10px;
+
+}
+
+
+.container_square-img {
+    position: relative;
+    margin-top: 60px;
+
+}
+
+.square-img-1{
+    width: 350px;
+    position: absolute;
+    left: -50px;
+
+}
+
+.square-img-2{
+    width: 270px;
+    position: absolute;
+    top: 50px;
+}
+
+.square-img-3{
+    width: 180px;
+    position: absolute;
+    right: 10px;
+}
+
+
+h3 {
+
+    font-size: 22px;
+    
+
+}
+
+.psquare { 
+
+    font-size: 18px;
+}
+
+ label {
+      font-size: 16px;
+    }
+    
+    input[type="text"]
+{
+  font-size: 16px;
+
+}
+
+input[type="tel"]
+{
+  font-size: 16px;
+
+}
+
+.list-item {
+    width: 90%;
+}
+
+.preimushchestva-wrapper {
+    width: 100%;
+}
+
+.preimushchestva-grid {
+    grid-template-columns: repeat(1,minmax(200px,1fr));
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.img-preimushchestva {
+    width: 30%;
+}
+
+.preimushchestva-text-1 {
+    font-size: 20px;
+    margin: 0 20px 30px 20px;
+    padding: 0 30px 0 0;
+}
+
+.preimushchestva-text-2 {
+    font-size: 18px;
+    margin: 0 20px 30px 20px;
+    padding: 0 30px 0 0;
+}
+
+ .place {
+  font-size: 18px;
+ }
+
+      .marquee-container {
+        height: 15rem;
+    }
+
+      .item {
+        width: 15rem;
+        height: 10rem;
+        margin: 3rem 0.5rem;
+      }
+      
+      .container_map {
+    margin-top: 2rem;
+
+}
+      
+      .map {
+        width: 100%;
+        height: 78rem;
+      }
+
+      .map-text {          margin-left: 20px;
+    width: 90%;   
+    font-size: 18px;
+  letter-spacing: 2px;
+    }
+    
+          .map-item {
+
+top: 53rem;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+width: 90%;
+height: 20rem;
+}
+
+.contact-container_footer {
+    max-width: 280px;
+}
+
+ul {
+    margin-left: -20px;
+}
+
+.section-header {
+  padding: 100px 0 40px 0;
+}
+
+.contact-wrapper {
+    padding: 0 10px 0 10px;
+}
+
+.contact-form {
+  grid-template-columns: repeat(1,minmax(200px,1fr));
+  grid-template-rows: repeat(2,min-content);
+  width: 300px;
+  margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+}
+
+.form-control {
+  height: 50px;  
+}
+
+.send-button {
+  height: 60px;
+  width: 220px;
+}
+
+.phone2 {
+    font-size: 18px;
+}
+
+.phone {
+    font-size: 20px;
+}
+
+.gmail {
+    font-size: 14px;
+}
+
+.send-text {
+  font: 700 14px;
+  font-family: 'Unbounded', "Arial", sans-serif;
+}
+
+.contact-list_footer {
+    margin-left: -20px;
+}
+
+.container_footer {
+  padding-top: 30px;
+}
+
+
+.logo-container_footer {
+    width: 90%;
+}
+
+.logo_img-footer {
+  width: 70%;
+}
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px) {
+    .heder_inner-text {
+        max-width: 70%;
+        margin-top: 15px;
+    }
+    
+    .heder_inner-button {
+        margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+top: 8rem;
+    }
+    
+        .btn-primary {
+        width: 280px;
+        height: 60px;
+    }
+    
+    .button {
+        font-size: 16px;
+    }
+    
+    h1,.title-2 {
+    width: 100%;
+    font-size: 28px;
+    text-align: center;
+
+}
+
+    .title {
+text-align: center;
+        font-size: 28px;   
+    margin-bottom: 38px;
+    }
+    
+            .title-1 {
+text-align: center;
+        font-size: 22px;
+    }
+
+.intro_content {
+    width: 100%;
+}
+
+    .intro_inner {
+margin-top: 10rem;
+}
+
+.btn-ili {
+    margin-top: 5px;
+    margin-left: 200px;
+    font-size: 22px;
+    width: 150px;
+    height: 60px;
+    
+    
+  }
+  .btn-iz {
+      margin-top: 1rem;
+      margin-left: 90px;
+      font-size: 22px;
+    width: 280px;
+    height: 65px;
+    }
+    
+        .intro_photo {
+    top: 22rem;
+    left: 0;
+    width: 100%;
+
+}
+
+.slogan {
+    margin-top: 22rem;
+}
+
+.slogan-text {
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+.slogan-text-2 {
+    font-size: 22px;
+    line-height: 1.8;
+    margin-left: 50px;
+}
+
+.squares {/*КАРТОЧКИ С ГОРОДАМИ И ЦЕНАМИ*/
+    grid-template-columns: repeat(1,minmax(200px,1fr));
+    grid-template-rows: repeat(2,min-content);
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 22rem;
+}
+
+
+
+.square_1, .square_2 {
+    align-self: unset;
+    padding: 0 10px 0 10px; 
+}
+
+.square_3, .square_4 {
+    align-self: unset;
+    padding: 0 10px 0 10px;
+
+}
+
+ label {
+      font-size: 16px;
+    }
+    
+    input[type="text"]
+{
+  font-size: 16px;
+
+}
+
+input[type="tel"]
+{
+  font-size: 16px;
+
+}
+
+ .list-item {
+     width: 90%;
+ }
+ 
+ .preimushchestva-wrapper {
+    width: 100%;
+}
+
+.preimushchestva-grid {
+    grid-template-columns: repeat(1,minmax(200px,1fr));
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.img-preimushchestva {
+    width: 30%;
+}
+ 
+ .preimushchestva-text-1 {
+    font-size: 20px;
+    margin: 0 20px 30px 20px;
+    padding: 0 30px 0 0;
+}
+
+.preimushchestva-text-2 {
+    font-size: 22px;
+    margin: 0 20px 30px 20px;
+    padding: 0 30px 0 0;
+}
+
+ .place {
+  font-size: 22px;
+ }
+
+      .marquee-container {
+        height: 15rem;
+    }
+
+      .item {
+        width: 15rem;
+        height: 10rem;
+        margin: 3rem 0.5rem;
+      }
+      
+      .container_map {
+    margin-top: 2rem;
+margin-left: 10px;
+}
+      
+      .map {
+        width: 100%;
+        height: 73rem;
+      }
+
+      .map-text {          margin-left: 20px;
+    width: 90%;   
+    font-size: 22px;
+  letter-spacing: 2px;
+    }
+    
+          .map-item {
+
+top: 47rem;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+width: 90%;
+height: 20rem;
+}
+
+.contact-container_footer {
+    max-width: 480px;
+}
+
+.section-header {
+  padding: 100px 0 40px 0;
+}
+
+.contact-form {
+  grid-template-columns: repeat(1,minmax(200px,1fr));
+  grid-template-rows: repeat(2,min-content);
+  width: 380px;
+  margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+
+  
+}
+
+.phone {
+    font-size: 24px;
+}
+
+.gmail {
+    font-size: 16px;
+}
+
+ul {
+    margin-left: -20px;
+}
+
+.contact-list_footer {
+    margin-left: -20px;
+}
+
+.form-control {
+  height: 60px;  
+}
+
+.send-button {
+  height: 60px;
+  width: 280px;
+}
+
+.send-text {
+  font: 700 14px;
+  font-family: 'Unbounded', "Arial", sans-serif;
+}
+
+.container_footer {
+  padding-top: 30px;
+}
+
+
+.logo-container_footer {
+    width: 65%;
+}
+
+.logo_img-footer {
+  width: 65%;
+}
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px) and (orientation: landscape) {
+    
+    
+    .heder_inner-button {
+        top: 8rem;
+        margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+
+    }
+    
+        .heder_inner-text {
+        max-width: 70%;
+        margin-top: 15px;
+    }
+    
+        .btn-primary {
+        width: 280px;
+        height: 60px;
+    }
+    
+        .button {
+        font-size: 16px;
+    }
+
+h1,.title-2 {
+    width: 100%;
+    font-size: 28px;
+    text-align: center;
+}
+
+    .title {
+text-align: center;
+        font-size: 28px;   
+    margin-bottom: 38px;
+    }
+    
+    .title-1 {
+text-align: center;
+        font-size: 22px;
+    }
+
+.intro_content {
+    width: 100%;
+}
+
+    .intro_inner {
+margin-top: 10rem;
+}
+
+.btn-ili {
+    margin-top: 5px;
+    margin-left: 200px;
+    font-size: 22px;
+    width: 150px;
+    height: 60px;
+    
+    
+  }
+  .btn-iz {
+      margin-top: 1rem;
+      margin-left: 90px;
+      font-size: 22px;
+    width: 280px;
+    height: 65px;
+    }
+    
+        .intro_photo {
+    top: 22rem;
+    left: 0;
+    width: 100%;
+
+}
+
+.slogan {
+    margin-top: 22rem;
+}
+
+.slogan-text {
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+.slogan-text-2 {
+    font-size: 22px;
+    line-height: 1.8;
+    margin-left: 50px;
+}
+
+.squares {/*КАРТОЧКИ С ГОРОДАМИ И ЦЕНАМИ*/
+    grid-template-columns: repeat(1,minmax(200px,1fr));
+    grid-template-rows: repeat(2,min-content);
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 22rem;
+}
+
+.square_1, .square_2 {
+    align-self: unset;
+    padding: 0 10px 0 10px; 
+}
+
+.square_3, .square_4 {
+    align-self: unset;
+    padding: 0 10px 0 10px;
+
+}
+ label {
+      font-size: 16px;
+    }
+    
+    input[type="text"]
+{
+  font-size: 16px;
+
+}
+
+input[type="tel"]
+{
+  font-size: 16px;
+
+}
+
+ .list-item {
+     width: 90%;
+ }
+ 
+ .preimushchestva-wrapper {
+    width: 100%;
+}
+
+.preimushchestva-grid {
+    grid-template-columns: repeat(1,minmax(200px,1fr));
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.img-preimushchestva {
+    width: 30%;
+}
+ 
+ .preimushchestva-text-1 {
+    font-size: 24px;
+    margin: 0 20px 30px 20px;
+    padding: 0 30px 0 0;
+}
+
+.preimushchestva-text-2 {
+    font-size: 22px;
+    margin: 0 20px 30px 20px;
+    padding: 0 30px 0 0;
+}
+
+
+ .place {
+  font-size: 22px;
+ }
+
+      .marquee-container {
+        height: 15rem;
+    }
+
+      .item {
+        width: 15rem;
+        height: 10rem;
+        margin: 3rem 0.5rem;
+      }
+      
+      .container_map {
+    margin-top: 2rem;
+margin-left: 10px;
+}
+      
+      .map {
+        width: 100%;
+        height: 73rem;
+      }
+
+      .map-text {          margin-left: 20px;
+    width: 90%;   
+    font-size: 22px;
+  letter-spacing: 2px;
+    }
+    
+          .map-item {
+
+top: 47rem;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+width: 90%;
+height: 20rem;
+}
+
+.contact-container_footer {
+    max-width: 480px;
+}
+
+.contact-form {
+  grid-template-columns: repeat(1,minmax(200px,1fr));
+  grid-template-rows: repeat(2,min-content);
+  width: 380px;
+  margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+  
+}
+ul {
+    margin-left: -20px;
+}
+
+.contact-list_footer {
+    margin-left: -20px;
+}
+.form-control {
+  height: 60px;  
+}
+
+.send-button {
+  height: 60px;
+  width: 280px;
+}
+
+.send-text {
+  font: 700 14px;
+  font-family: 'Unbounded', "Arial", sans-serif;
+}
+
+.phone {
+    font-size: 24px;
+}
+
+.gmail {
+    font-size: 16px;
+}
+
+.container_footer {
+  padding-top: 30px;
+}
+
+
+.logo-container_footer {
+    width: 65%;
+}
+
+.logo_img-footer {
+  width: 65%;
+}
+
+    
+}
+ 
+/* iPads (вертикальная и горизонтальная) ----------- */
+@media only screen and (min-width: 640px) and (max-width: 959px) {
+/* стили */
+    .logo_text {
+        font-size: 18px;
+    }
+    
+    .heder_inner-text {
+     max-width: 50%;
+        margin-top: 10px;
+    }
+
+    .btn-primary {
+        width: 280px;
+        height: 60px;
+    }
+
+    .button {
+        font-size: 16px;
+    }
+
+    .button-img {
+        top: 1.2rem;
+right: 1.5rem;
+        width: 4rem;
+    }
+
+
+    h1,.title-2 {
+text-align: center;
+        font-size: 36px;   
+    
+    }
+    
+        .title {
+text-align: center;
+        font-size: 32px;   
+    margin-bottom: 42px;
+    }
+    
+    .title-1 {
+text-align: center;
+        font-size: 26px;
+    }
+    
+    .intro_content {
+        width: 100%;
+    }
+    
+    .intro_photo {
+        top: 22rem;
+        left: 50px;
+        width: 80%;
+    }
+
+    .btn-ili {
+        margin-left: 20rem;
+    margin-top: 1rem;
+        font-size: 2rem;
+}
+
+.btn-iz {
+    margin-left: 11rem;
+    margin-top: 1.2rem;
+    font-size: 2rem;
+    width: 25rem;
+    height: 5rem;
+}
+    
+    .intro_inner {
+margin-top: 6rem;
+}
+    
+    .heder_inner-button {
+    top: 1rem;
+    right: 1rem;
+    left: auto;
+}
+
+.slogan {
+    margin-top: 25rem;
+}
+
+.slogan-text {
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.slogan-text-2 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-left: 100px;
+}
+
+.squares {/*КАРТОЧКИ С ГОРОДАМИ И ЦЕНАМИ*/
+    grid-template-columns: repeat(2,minmax(200px,1fr));
+    grid-template-rows: repeat(2,min-content);
+    margin-left: 20px;
+    margin-right: 25px;
+    margin-top: 6rem;
+}
+
+
+
+.square_1, .square_2 {
+    align-self: unset;
+    padding: 0 10px 0 10px;
+
+}
+
+.square_3, .square_4 {
+    align-self: unset;
+        padding: 0 10px 0 10px;
+
+}
+
+.container_square-img {
+    position: relative;
+    margin-top: 50px;
+}
+
+.square-img-1{
+    width: 250px;
+    position: absolute;
+    left: 5px;
+
+}
+
+.square-img-2{
+    width: 150px;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+}
+
+.square-img-3{
+    width: 100px;
+    position: absolute;
+    right: 5px;
+    top: -40px;
+}
+
+h3 {
+
+    font-size: 22px;
+
+}
+
+.psquare { 
+
+    font-size: 16px;
+}
+
+label {
+      font-size: 16px;
+    }
+    
+    input[type="text"]
+{
+  font-size: 16px;
+
+}
+
+input[type="tel"]
+{
+  font-size: 16px;
+
+}
+
+.preimushchestva-wrapper {
+    width: 100%;
+}
+
+.preimushchestva-grid {
+    grid-template-columns: [start] 20% [line2] 80% [end];
+    margin-right: 20px;
+}
+
+.preimushchestva-text-1 {
+    font-size: 24px;
+}
+
+.preimushchestva-text-2 {
+    font-size: 22px;
+}
+
+  .place {
+  font-size: 22px;
+ }
+ 
+ ul {
+    margin-left: -20px;
+}
+
+
+    .marquee-container {
+        height: 20rem;
+
+    }
+
+      .item {/*логотипы санаториев*/
+        width: 22rem;
+        height: 15rem;
+        margin: 3rem 0.5rem;
+      }
+      
+            .container_map {
+          margin-left: 20px;
+          
+      }
+      
+      
+      .map {
+          height: 63rem;
+      }
+
+      .map-text {/*текст о Белокурихе*/
+        font-size: 22px;
+        line-height: 1.2;
+        width: 90%;
+          letter-spacing: 2px;
+      }
+      
+      .map-item {
+top: 32rem;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+width: 90%;
+height: 25rem;
+}
+
+.section-header {
+  padding: 100px 0 40px 0;
+}
+
+.contact-wrapper {
+  width: 100%;
+}
+
+.contact-wrapper_footer {
+grid-template-columns: repeat(1,minmax(200px,1fr));
+    grid-template-rows: repeat(2,min-content);
+  width: 100%;
+}
+
+.contact-form {
+  width: 450px;
+    margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+}
+
+.direct-contact-container {
+  width: 650px;
+}
+
+.contact-container_footer {
+  width: 680px;
+}
+
+
+.form-control {
+  height: 60px;  
+}
+
+.send-button {
+  height: 55px;
+  width: 300px;
+}
+
+.send-text {
+  font: 700 12px;
+  font-family: 'Unbounded', "Arial", sans-serif;
+}
+
+.container_footer {
+  padding-top: 50px;
+}
+
+
+     label {
+      font-size: 16px;
+    }
+
+input[type="text"]
+{
+  font-size: 16px;
+}
+
+input[type="tel"]
+{
+  font-size: 16px;
+}
+
+.phone {
+    font-size: 28px;
+}
+
+.gmail {
+    font-size: 20px;
+}
+
+.logo-container_footer {
+  width: 45%;
+}
+.logo_img-footer {
+  width: 70%;
+}
+
+}
+
+@media only screen and (min-width: 640px) and (max-width: 959px) and (orientation: landscape) {
+        .logo_text {
+        font-size: 18px;
+    }
+    
+    .heder_inner-text {
+        max-width: 50%;
+        margin-top: 10px;
+    }
+
+    .btn-primary {
+        width: 280px;
+        height: 60px;
+    }
+
+    .button {
+        font-size: 16px;
+    }
+
+    .button-img {
+        top: 1.2rem;
+right: 1.5rem;
+        width: 4rem;
+    }
+
+
+    h1,.title-2 {
+text-align: center;
+        font-size: 36px;   
+    
+    }
+    
+        .title {
+text-align: center;
+        font-size: 32px; 
+        margin-bottom: 42px;
+    
+    }
+    
+    .title-1 {
+text-align: center;
+        font-size: 26px;
+    }
+    
+    .intro_content {
+        width: 100%;
+    }
+    
+    .intro_photo {
+        top: 22rem;
+        left: 50px;
+        width: 80%;
+    }
+
+    .btn-ili {
+        margin-left: 20rem;
+    margin-top: 1rem;
+        font-size: 2rem;
+}
+
+.btn-iz {
+    margin-left: 11rem;
+    margin-top: 1.2rem;
+    font-size: 2rem;
+    width: 25rem;
+    height: 5rem;
+}
+    
+    .intro_inner {
+margin-top: 6rem;
+}
+    
+    .heder_inner-button {
+    top: 1rem;
+    right: 1rem;
+    left: auto;
+}
+
+.slogan {
+    margin-top: 25rem;
+}
+
+.slogan-text {
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.slogan-text-2 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-left: 100px;
+}
+
+.squares {/*КАРТОЧКИ С ГОРОДАМИ И ЦЕНАМИ*/
+    grid-template-columns: repeat(2,minmax(200px,1fr));
+    grid-template-rows: repeat(2,min-content);
+    margin-left: 20px;
+    margin-right: 25px;
+    margin-top: 6rem;   
+}
+
+.square_1, .square_2 {
+    align-self: unset;
+    padding: 0 10px 0 10px;
+
+}
+
+.square_3, .square_4 {
+    align-self: unset;
+    padding: 0 10px 0 10px;
+
+}
+
+.container_square-img {
+    position: relative;
+    margin-top: 50px;
+}
+
+.square-img-1{
+    width: 250px;
+    position: absolute;
+    left: 5px;
+
+}
+
+.square-img-2{
+    width: 150px;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+}
+
+.square-img-3{
+    width: 100px;
+    position: absolute;
+    right: 5px;
+    top: -40px;
+}
+
+h3 {
+
+    font-size: 22px;
+
+}
+
+.psquare { 
+
+    font-size: 16px;
+}
+
+.preimushchestva-wrapper {
+    width: 100%;
+}
+
+.preimushchestva-grid {
+    grid-template-columns: [start] 20% [line2] 80% [end];
+    margin-right: 20px;
+}
+
+.preimushchestva-text-1 {
+    font-size: 24px;
+}
+
+.preimushchestva-text-2 {
+    font-size: 22px;
+}
+
+ .place {
+  font-size: 22px;
+ }
+
+    .marquee-container {
+        height: 20rem;
+
+    }
+
+      .item {/*логотипы санаториев*/
+        width: 22rem;
+        height: 15rem;
+        margin: 3rem 0.5rem;
+      }
+      
+      .container_map {
+          margin-left: 20px;
+      }
+      
+      .map {
+          height: 63rem;
+      }
+
+      .map-text {/*текст о Белокурихе*/
+        font-size: 22px;
+        line-height: 1.2;
+        width: 90%;
+          letter-spacing: 2px;
+      }
+      
+      .map-item {
+top: 32rem;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+width: 90%;
+height: 25rem;
+}
+
+
+.contact-wrapper {
+  width: 100%;
+}
+
+.contact-wrapper_footer {
+    grid-template-columns: repeat(1,minmax(200px,1fr));
+    grid-template-rows: repeat(2,min-content);
+  width: 100%;
+}
+
+.contact-form {
+  width: 450px;
+    margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+}
+
+.direct-contact-container {
+  width: 650px;
+}
+
+.contact-container_footer {
+  width: 680px;
+}
+
+
+.form-control {
+  height: 60px;  
+}
+
+.send-button {
+  height: 55px;
+  width: 300px;
+}
+
+.send-text {
+  font: 700 12px;
+  font-family: 'Unbounded', "Arial", sans-serif;
+}
+
+ul {
+    margin-left: -20px;
+}
+
+
+.container_footer {
+  padding-top: 50px;
+}
+
+
+     label {
+      font-size: 16px;
+    }
+
+input[type="text"]
+{
+  font-size: 16px;
+}
+
+input[type="tel"]
+{
+  font-size: 16px;
+}
+
+.phone {
+    font-size: 28px;
+}
+
+.gmail {
+    font-size: 20px;
+}
+
+.logo-container_footer {
+  width: 45%;
+}
+.logo_img-footer {
+  width: 70%;
+}
+
+}
+ 
+/* iPads (горизонтальная) ----------- */
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+/* стили */
+
+    .heder_inner-text {
+        max-width: 50%;
+        margin-top: 10px;
+    }
+    
+ .logo_text {
+        font-size: 18px;
+    }
+
+    .btn-primary {
+        width: 280px;
+        height: 70px;
+    }
+
+    .button {
+        font-size: 16px;
+    }
+
+    .button-img {
+        top: 1.2rem;
+right: 1.5rem;
+        width: 4rem;
+    }
+
+
+    h1, .title-2 {
+text-align: left;
+        font-size: 42px;   
+    
+    }
+    
+        .title {
+text-align: center;
+        font-size: 36px;   
+    margin-bottom: 46px;
+    }
+    
+    .title-1 {
+text-align: center;
+        font-size: 26px;
+    }
+
+    .btn-ili {
+        margin-left: 40rem;
+    margin-top: -5rem;
+        font-size: 2rem;
+}
+
+.btn-iz {
+    margin-left: 30rem;
+    margin-top: -1rem;
+    font-size: 2rem;
+    width: 25rem;
+    height: 5rem;
+}
+    
+    .intro_inner {
+margin-top: 10rem;
+}
+    
+    .heder_inner-button {
+    top: 1rem;
+    right: 1rem;
+    left: auto;
+}
+
+
+    
+    .intro_content {
+    margin-top: -6rem;
+    padding-left: 20px;
+    width: 100%;
+}
+
+    .intro_photo {
+    top: 10rem;
+    left: 120px;
+    width: 70%;
+}
+
+.slogan {
+    margin-top: 28rem;
+}
+
+.slogan-text {
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+.slogan-text-2 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-left: 350px;
+}
+
+
+.squares {/*КАРТОЧКИ С ГОРОДАМИ И ЦЕНАМИ*/
+    grid-template-columns: repeat(2,minmax(200px,1fr));
+    grid-template-rows: repeat(2,min-content);
+    margin-left: 20px;
+    margin-right: 25px;
+    margin-top: 6rem;
+}
+
+.square_1, .square_2 {
+    align-self: unset;
+    padding: 0 10px 0 10px;
+
+}
+
+.square_3, .square_4 {
+    align-self: unset;
+    padding: 0 10px 0 10px;
+}
+
+
+.container_square-img {
+    position: relative;
+    margin-top: 50px;
+}
+
+.square-img-1{
+    width: 250px;
+    position: absolute;
+    left: 5px;
+
+}
+
+.square-img-2{
+    width: 150px;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+}
+
+.square-img-3{
+    width: 100px;
+    position: absolute;
+    right: 5px;
+    top: -40px;
+}
+
+h3 {
+
+    font-size: 24px;
+
+}
+
+.psquare { 
+
+    font-size: 20px;
+}
+
+.preimushchestva-wrapper {
+    width: 80%;
+}
+
+.preimushchestva-grid {
+    grid-template-columns: [start] 20% [line2] 80% [end];
+    margin-right: 20px;
+}
+
+.preimushchestva-text-1 {
+    font-size: 22px;
+}
+
+.preimushchestva-text-2 {
+    font-size: 20px;
+}
+
+ .place {
+  font-size: 20px;
+ }
+
+    .marquee-container {
+        height: 20rem;
+
+    }
+
+      .item {/*логотипы санаториев*/
+        width: 22rem;
+        height: 15rem;
+        margin: 3rem 0.5rem;
+      }
+      
+            .container_map {
+          margin-left: 20px;
+      }
+      
+      
+      .map {
+          height: 35rem;
+      }
+
+      .map-text {/*текст о Белокурихе*/
+        font-size: 20px;
+        line-height: 1.2;
+        width: 50%;
+          letter-spacing: 2px;
+      }
+      
+      .map-item {
+top: 0;
+right: 2rem;
+width: 40%;
+height: 25rem;
+}
+
+.section-header {
+  padding: 100px 0 40px 0;
+}
+
+.contact-wrapper {
+  grid-template-columns: repeat(2,minmax(200px,1fr));
+  grid-template-rows: repeat(2,min-content);
+  width: 100%;
+    padding-left: 20px;
+}
+
+.contact-wrapper_footer {
+  grid-template-columns: repeat(2,minmax(200px,1fr));
+  grid-template-rows: repeat(2,min-content);
+  width: 100%;
+}
+
+.contact-form {
+  width: 430px;
+}
+
+.direct-contact-container {
+  width: 650px;
+}
+
+.contact-container_footer {
+  width: 600px;
+}
+
+
+.form-control {
+  height: 60px;  
+}
+
+.send-button {
+  height: 55px;
+  width: 300px;
+}
+
+.send-text {
+  font: 700 12px;
+  font-family: 'Unbounded', "Arial", sans-serif;
+}
+
+ul {
+    margin-left: -20px;
+}
+
+
+.list-item {
+    width: 70%;
+}
+
+.container_footer {
+  padding-top: 50px;
+}
+
+     label {
+      font-size: 16px;
+    }
+
+input[type="text"]
+{
+  font-size: 16px;
+}
+
+input[type="tel"]
+{
+  font-size: 16px;
+}
+
+.phone {
+    font-size: 28px;
+}
+
+.gmail {
+    font-size: 20px;
+}
+
+.logo-container_footer {
+  width: 50%;
+}
+.logo_img-footer {
+  width: 70%;
+}
+
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) and (orientation: landscape) {
+/* стили */
+
+    .heder_inner-text {
+        max-width: 50%;
+        margin-top: 10px;
+    }
+    
+ .logo_text {
+        font-size: 18px;
+    }
+
+    .btn-primary {
+        width: 280px;
+        height: 70px;
+    }
+
+    .button {
+        font-size: 16px;
+    }
+
+    .button-img {
+        top: 1.2rem;
+right: 1.5rem;
+        width: 4rem;
+    }
+
+
+    h1,.title-2 {
+text-align: left;
+        font-size: 42px; 
+    
+    }
+    
+        .title {
+text-align: center;
+        font-size: 36px;   
+        margin-bottom: 46px;
+    
+    }
+    
+    .title-1 {
+text-align: center;
+        font-size: 26px;
+    }
+
+   .btn-ili {
+        margin-left: 40rem;
+    margin-top: -5rem;
+        font-size: 2rem;
+}
+
+.btn-iz {
+    margin-left: 30rem;
+    margin-top: -1rem;
+    font-size: 2rem;
+    width: 25rem;
+    height: 5rem;
+}
+    
+    .intro_inner {
+margin-top: 10rem;
+}
+    
+    .heder_inner-button {
+    top: 1rem;
+    right: 1rem;
+    left: auto;
+}
+
+
+    
+    .intro_content {
+    margin-top: -6rem;
+    padding-left: 20px;
+    width: 100%;
+}
+
+    .intro_photo {
+    top: 10rem;
+    left: 120px;
+    width: 70%;
+}
+.slogan {
+    margin-top: 28rem;
+}
+
+.slogan-text {
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+.slogan-text-2 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-left: 350px;
+}
+
+
+
+.squares {/*КАРТОЧКИ С ГОРОДАМИ И ЦЕНАМИ*/
+    grid-template-columns: repeat(2,minmax(200px,1fr));
+    grid-template-rows: repeat(2,min-content);
+    margin-left: 20px;
+    margin-right: 25px;
+        margin-top: 6rem;
+}
+
+.square_1, .square_2 {
+    align-self: unset;
+    padding: 0 10px 0 10px;
+
+}
+
+.square_3, .square_4 {
+    align-self: unset;
+    padding: 0 10px 0 10px;
+}
+
+.container_square-img {
+    position: relative;
+    margin-top: 50px;
+}
+
+.square-img-1{
+    width: 250px;
+    position: absolute;
+    left: 5px;
+
+}
+
+.square-img-2{
+    width: 150px;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+}
+
+.square-img-3{
+    width: 100px;
+    position: absolute;
+    right: 5px;
+    top: -40px;
+}
+
+h3 {
+
+    font-size: 24px;
+
+}
+
+.psquare { 
+
+    font-size: 20px;
+}
+
+.preimushchestva-wrapper {
+    width: 80%;
+}
+
+.preimushchestva-grid {
+    grid-template-columns: [start] 20% [line2] 80% [end];
+    margin-right: 20px;
+}
+
+.preimushchestva-text-1 {
+    font-size: 22px;
+}
+
+.preimushchestva-text-2 {
+    font-size: 20px;
+}
+
+ .place {
+  font-size: 20px;
+ }
+
+    .marquee-container {
+        height: 20rem;
+
+    }
+
+      .item {/*логотипы санаториев*/
+        width: 22rem;
+        height: 15rem;
+        margin: 3rem 0.5rem;
+      }
+      
+        .container_map {
+          margin-left: 20px;
+      }
+      
+      
+      .map {
+          height: 35rem;
+      }
+
+      .map-text {/*текст о Белокурихе*/
+        font-size: 20px;
+        line-height: 1.2;
+        width: 50%;
+          letter-spacing: 2px;
+      }
+      
+      .map-item {
+top: 0;
+right: 2rem;
+width: 40%;
+height: 25rem;
+}
+
+.section-header {
+  padding: 100px 0 40px 0;
+}
+
+
+.contact-wrapper {
+  grid-template-columns: repeat(2,minmax(200px,1fr));
+  grid-template-rows: repeat(2,min-content);
+  width: 100%;
+  padding-left: 20px;
+}
+
+.contact-wrapper_footer {
+  grid-template-columns: repeat(2,minmax(200px,1fr));
+  grid-template-rows: repeat(2,min-content);
+  width: 100%;
+}
+
+.contact-form {
+  width: 430px;
+}
+
+.direct-contact-container {
+  width: 650px;
+}
+
+.contact-container_footer {
+  width: 600px;
+}
+
+
+.form-control {
+  height: 60px;  
+}
+
+.send-button {
+  height: 55px;
+  width: 300px;
+}
+
+.send-text {
+  font: 700 12px;
+  font-family: 'Unbounded', "Arial", sans-serif;
+}
+
+ul {
+    margin-left: -20px;
+}
+
+
+.list-item {
+    width: 70%;
+}
+
+.container_footer {
+  padding-top: 50px;
+}
+
+     label {
+      font-size: 16px;
+    }
+
+input[type="text"]
+{
+  font-size: 16px;
+}
+
+input[type="tel"]
+{
+  font-size: 16px;
+}
+
+.phone {
+    font-size: 28px;
+}
+
+.gmail {
+    font-size: 20px;
+}
+
+.logo-container_footer {
+  width: 50%;
+}
+.logo_img-footer {
+  width: 70%;
+}
+
+}
+ 
+/* iPads (вертикальная) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+/* стили */
+}
+ 
+/* iPad 3**********/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+/* стили */
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+/* стили */
+}
+ 
+/* Настольные компьютеры и ноутбуки ----------- */
+@media only screen  and (min-width: 1200px) and (max-width: 1399px) {
+/* стили */
+ .heder_inner-text {
+     max-width: 50%;
+ }
+ 
+ .logo_text {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        width: 320px;
+        height: 80px;
+    }
+
+    .button {
+        font-size: 20px;
+    }
+
+    .button-img {
+        top: 1.2rem;
+right: 1.5rem;
+        width: 4rem;
+    }
+
+
+    h1,.title-2 {
+text-align: left;
+        font-size: 42px;   
+    
+    }
+    
+        .title {
+text-align: center;
+        font-size: 36px;   
+    margin-bottom: 46px;
+    }
+    
+    .title-1 {
+text-align: center;
+        font-size: 26px;
+    }
+
+    .btn-ili {
+        margin-left: 26rem;
+    margin-top: -1rem;
+        font-size: 2rem;
+}
+
+.btn-iz {
+    margin-left: 17rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    width: 25rem;
+    height: 5rem;
+}
+    
+    .intro_inner {
+        width: 100%;
+margin-top: 10rem;
+}
+    
+    .heder_inner-button {
+    top: 1rem;
+    right: 1rem;
+    left: auto;
+}
+
+
+    
+    .intro_content {
+    width: 100%;
+    margin-top: -3rem;
+    padding-left: 20px;
+}
+
+    .intro_photo {
+    top: 0;
+    right: 0;
+    width: 40%;
+}
+
+
+.squares {/*КАРТОЧКИ С ГОРОДАМИ И ЦЕНАМИ*/
+    grid-template-columns: repeat(2,minmax(200px,1fr));
+    grid-template-rows: repeat(2,min-content);
+        margin-left: 20px;
+    margin-right: 25px;
+    margin-top: 8rem;
+}
+
+.square_1, .square_2 {
+    align-self: unset;
+    padding: 0 10px 0 10px; 
+}
+
+.square_3, .square_4 {
+    align-self: unset;
+    padding: 0 10px 0 10px; 
+}
+
+.container_square-img {
+    position: relative;
+    margin-top: 50px;
+}
+
+.square-img-1{
+    width: 250px;
+    position: absolute;
+    left: 5px;
+
+}
+
+.square-img-2{
+    width: 150px;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+}
+
+.square-img-3{
+    width: 100px;
+    position: absolute;
+    right: 5px;
+    top: -40px;
+}
+
+h3 {
+
+    font-size: 26px;
+
+}
+
+.psquare { 
+
+    font-size: 1.5rem;
+}
+
+.preimushchestva-wrapper {
+    width: 60%;
+}
+
+.preimushchestva-grid {
+    grid-template-columns: [start] 20% [line2] 80% [end];
+    margin-right: 20px;
+}
+
+.preimushchestva-text-1 {
+    font-size: 26px;
+}
+
+.preimushchestva-text-2 {
+    font-size: 24px;
+}
+
+ .place {
+  font-size: 24px;
+ }
+
+    .marquee-container {
+        height: 20rem;
+
+    }
+
+      .item {/*логотипы санаториев*/
+        width: 22rem;
+        height: 15rem;
+        margin: 3rem 0.5rem;
+      }
+      
+            .container_map {
+          margin-left: 20px;
+      }
+      
+      
+      .map {
+          height: 35rem;
+      }
+
+      .map-text {/*текст о Белокурихе*/
+        font-size: 24px;
+        line-height: 1.2;
+        width: 60%;
+          letter-spacing: 2px;
+      }
+      
+      .map-item {
+top: 0;
+right: 2rem;
+width: 30%;
+height: 25rem;
+}
+
+.section-header {
+  padding: 100px 0 40px 0;
+}
+
+
+.contact-wrapper {
+  grid-template-columns: repeat(2,minmax(200px,1fr));
+  grid-template-rows: repeat(2,min-content);
+  width: 100%;
+    padding-left: 20px;
+}
+
+.contact-wrapper_footer {
+  grid-template-columns: repeat(2,minmax(200px,1fr));
+  grid-template-rows: repeat(2,min-content);
+  width: 100%;
+}
+
+.contact-form {
+  width: 600px;
+}
+
+.list-item {
+    width: 90%;
+}
+
+.direct-contact-container {
+  width: 650px;
+}
+
+.contact-container_footer {
+  width: 600px;
+}
+
+
+.form-control {
+  height: 60px;  
+}
+
+.send-button {
+  height: 55px;
+  width: 300px;
+}
+
+.send-text {
+  font: 700 12px;
+  font-family: 'Unbounded', "Arial", sans-serif;
+}
+
+.container_footer {
+  padding-top: 50px;
+}
+
+     label {
+      font-size: 16px;
+    }
+
+input[type="text"]
+{
+  font-size: 16px;
+}
+
+input[type="tel"]
+{
+  font-size: 16px;
+}
+
+.logo-container_footer {
+  width: 50%;
+}
+
+ul {
+    margin-left: -20px;
+}
+
+.phone {
+    font-size: 28px;
+}
+
+.gmail {
+    font-size: 20px;
+}
+
+.logo_img-footer {
+  width: 70%;
+}
+
+}
+
+@media only screen  and (min-width: 1400px) {
+/* стили */
+ .heder_inner-text {
+     max-width: 50%;
+ }
+ 
+ .logo_text {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        width: 320px;
+        height: 80px;
+    }
+
+    .button {
+        font-size: 20px;
+    }
+
+    .button-img {
+        top: 1.2rem;
+right: 1.5rem;
+        width: 4rem;
+    }
+
+
+    h1,.title-2 {
+text-align: left;
+        font-size: 42px;   
+    
+    }
+    
+        .title {
+text-align: center;
+        font-size: 36px;
+        margin-bottom: 46px;
+    
+    }
+    
+    .title-1 {
+text-align: center;
+        font-size: 26px;
+    }
+
+    .btn-ili {
+        margin-left: 26rem;
+    margin-top: -1rem;
+        font-size: 2rem;
+}
+
+.btn-iz {
+    margin-left: -20rem;
+    margin-top: 4rem;
+    font-size: 2rem;
+    width: 25rem;
+    height: 5rem;
+}
+    
+    .intro_inner {
+        width: 100%;
+margin-top: 10rem;
+}
+    
+    .heder_inner-button {
+    top: 1rem;
+    right: 1rem;
+    left: auto;
+}
+
+
+    
+    .intro_content {
+    width: 100%;
+    margin-top: -3rem;
+    padding-left: 20px;
+}
+
+    .intro_photo {
+    top: 0;
+    right: 0;
+    width: 40%;
+}
+
+
+.squares {/*КАРТОЧКИ С ГОРОДАМИ И ЦЕНАМИ*/
+    grid-template-columns: repeat(2,minmax(200px,1fr));
+    grid-template-rows: repeat(2,min-content);
+        margin-left: 20px;
+    margin-right: 25px;
+    margin-top: 8rem;
+}
+
+.square_1, .square_2 {
+    align-self: unset;
+    padding: 0 10px 0 10px; 
+}
+
+.square_3, .square_4 {
+    align-self: unset;
+    padding: 0 10px 0 10px; 
+}
+
+.container_square-img {
+    position: relative;
+    margin-top: 50px;
+}
+
+.square-img-1{
+    width: 250px;
+    position: absolute;
+    left: 5px;
+
+}
+
+.square-img-2{
+    width: 150px;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+}
+
+.square-img-3{
+    width: 100px;
+    position: absolute;
+    right: 5px;
+    top: -40px;
+}
+
+h3 {
+
+    font-size: 26px;
+
+}
+
+.psquare { 
+
+    font-size: 1.5rem;
+}
+
+.preimushchestva-wrapper {
+    width: 60%;
+}
+
+.preimushchestva-grid {
+    grid-template-columns: [start] 20% [line2] 80% [end];
+    margin-right: 20px;
+}
+
+.preimushchestva-text-1 {
+    font-size: 26px;
+}
+
+.preimushchestva-text-2 {
+    font-size: 24px;
+}
+
+ .place {
+  font-size: 24px;
+ }
+
+    .marquee-container {
+        height: 20rem;
+
+    }
+
+      .item {/*логотипы санаториев*/
+        width: 22rem;
+        height: 15rem;
+        margin: 3rem 0.5rem;
+      }
+      
+            .container_map {
+          margin-left: 20px;
+      }
+      
+      
+      .map {
+          height: 35rem;
+      }
+
+      .map-text {/*текст о Белокурихе*/
+        font-size: 24px;
+        line-height: 1.2;
+        width: 60%;
+          letter-spacing: 2px;
+      }
+      
+      .map-item {
+top: 0;
+right: 2rem;
+width: 30%;
+height: 25rem;
+}
+
+.section-header {
+  padding: 100px 0 40px 0;
+}
+
+
+.contact-wrapper {
+  grid-template-columns: repeat(2,minmax(200px,1fr));
+  grid-template-rows: repeat(2,min-content);
+  width: 100%;
+    padding-left: 20px;
+}
+
+.contact-wrapper_footer {
+  grid-template-columns: repeat(2,minmax(200px,1fr));
+  grid-template-rows: repeat(2,min-content);
+  width: 100%;
+}
+
+.contact-form {
+  width: 600px;
+}
+
+.list-item {
+    width: 90%;
+}
+
+.direct-contact-container {
+  width: 650px;
+}
+
+.contact-container_footer {
+  width: 600px;
+}
+
+
+.form-control {
+  height: 60px;  
+}
+
+.send-button {
+  height: 55px;
+  width: 300px;
+}
+
+.send-text {
+  font: 700 12px;
+  font-family: 'Unbounded', "Arial", sans-serif;
+}
+
+.container_footer {
+  padding-top: 50px;
+}
+
+     label {
+      font-size: 16px;
+    }
+
+input[type="text"]
+{
+  font-size: 16px;
+}
+
+input[type="tel"]
+{
+  font-size: 16px;
+}
+
+.logo-container_footer {
+  width: 50%;
+}
+
+ul {
+    margin-left: -20px;
+}
+
+.phone {
+    font-size: 28px;
+}
+
+.gmail {
+    font-size: 20px;
+}
+
+.logo_img-footer {
+  width: 70%;
+}
+
+}
+ 
+/* Большие экраны ----------- */
+@media only screen  and (min-width: 1824px) {
+/* стили */
+ .heder_inner-text {
+     max-width: 50%;
+ }
+ 
+ .logo_text {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        width: 320px;
+        height: 80px;
+    }
+
+    .button {
+        font-size: 20px;
+    }
+
+    .button-img {
+        top: 1.2rem;
+right: 1.5rem;
+        width: 4rem;
+    }
+
+
+    h1,.title-2 {
+text-align: left;
+        font-size: 42px;   
+    
+    }
+    
+        .title {
+text-align: center;
+        font-size: 40px;   
+    margin-bottom: 50px;
+    }
+    
+    .title-1 {
+text-align: center;
+        font-size: 28px;
+    }
+
+    .btn-ili {
+        margin-left: 26rem;
+    margin-top: -1rem;
+        font-size: 2rem;
+}
+
+.btn-iz {
+    margin-left: -20rem;
+    margin-top: 4rem;
+    font-size: 2rem;
+    width: 25rem;
+    height: 5rem;
+}
+    
+    .intro_inner {
+        width: 100%;
+margin-top: 10rem;
+}
+    
+    .heder_inner-button {
+    top: 1rem;
+    right: 1rem;
+    left: auto;
+}
+
+
+    
+    .intro_content {
+    width: 100%;
+    margin-top: -3rem;
+    padding-left: 20px;
+}
+
+    .intro_photo {
+    top: 0;
+    right: 0;
+    width: 40%;
+}
+
+
+.squares {/*КАРТОЧКИ С ГОРОДАМИ И ЦЕНАМИ*/
+    grid-template-columns: repeat(2,minmax(200px,1fr));
+    grid-template-rows: repeat(2,min-content);
+        margin-left: 20px;
+    margin-right: 25px;
+    margin-top: 8rem;
+}
+
+.square_1, .square_2 {
+    align-self: unset;
+    padding: 0 10px 0 10px; 
+}
+
+.square_3, .square_4 {
+    align-self: unset;
+    padding: 0 10px 0 10px; 
+}
+
+.container_square-img {
+    position: relative;
+    margin-top: 50px;
+}
+
+.square-img-1{
+    width: 250px;
+    position: absolute;
+    left: 5px;
+
+}
+
+.square-img-2{
+    width: 150px;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+}
+
+.square-img-3{
+    width: 100px;
+    position: absolute;
+    right: 5px;
+    top: -40px;
+}
+
+h3 {
+
+    font-size: 26px;
+
+}
+
+.psquare { 
+
+    font-size: 1.5rem;
+}
+
+.preimushchestva-wrapper {
+    width: 60%;
+}
+
+.preimushchestva-grid {
+    grid-template-columns: [start] 20% [line2] 80% [end];
+    margin-right: 20px;
+}
+
+.preimushchestva-text-1 {
+    font-size: 26px;
+}
+
+.preimushchestva-text-2 {
+    font-size: 24px;
+}
+
+ .place {
+  font-size: 24px;
+ }
+
+    .marquee-container {
+        height: 20rem;
+
+    }
+
+      .item {/*логотипы санаториев*/
+        width: 22rem;
+        height: 15rem;
+        margin: 3rem 0.5rem;
+      }
+      
+            .container_map {
+          margin-left: 20px;
+      }
+      
+      
+      .map {
+          height: 35rem;
+      }
+
+      .map-text {/*текст о Белокурихе*/
+        font-size: 24px;
+        line-height: 1.2;
+        width: 60%;
+          letter-spacing: 2px;
+      }
+      
+      .map-item {
+top: 0;
+right: 2rem;
+width: 30%;
+height: 25rem;
+}
+
+.section-header {
+  padding: 100px 0 40px 0;
+}
+
+
+.contact-wrapper {
+  grid-template-columns: repeat(2,minmax(200px,1fr));
+  grid-template-rows: repeat(2,min-content);
+  width: 100%;
+    padding-left: 20px;
+}
+
+.contact-wrapper_footer {
+  grid-template-columns: repeat(2,minmax(200px,1fr));
+  grid-template-rows: repeat(2,min-content);
+  width: 100%;
+}
+
+.contact-form {
+  width: 600px;
+}
+
+.list-item {
+    width: 90%;
+}
+
+.direct-contact-container {
+  width: 650px;
+}
+
+.contact-container_footer {
+  width: 600px;
+}
+
+
+.form-control {
+  height: 60px;  
+}
+
+.send-button {
+  height: 55px;
+  width: 300px;
+}
+
+.send-text {
+  font: 700 12px;
+  font-family: 'Unbounded', "Arial", sans-serif;
+}
+
+.container_footer {
+  padding-top: 50px;
+}
+
+     label {
+      font-size: 16px;
+    }
+
+input[type="text"]
+{
+  font-size: 16px;
+}
+
+input[type="tel"]
+{
+  font-size: 16px;
+}
+
+.logo-container_footer {
+  width: 50%;
+}
+
+ul {
+    margin-left: -20px;
+}
+
+.phone {
+    font-size: 28px;
+}
+
+.gmail {
+    font-size: 20px;
+}
+
+.logo_img-footer {
+  width: 70%;
+}
+}
+ 
+/* iPhone 4 ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+/* стили */
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+/* стили */
+}
+ 
+/* iPhone 5 ----------- */
+@media only screen and (min-width: 320px) and (max-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+@media only screen and (min-width: 320px) and (max-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+ 
+/* iPhone 6 ----------- */
+@media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+@media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+ 
+/* iPhone 6+ ----------- */
+@media only screen and (min-width: 414px) and (max-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+@media only screen and (min-width: 414px) and (max-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+ 
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+ 
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3){
+/* стили */
+}
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3){
+/* стили */
+}
+ 
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-width: 360px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3){
+/* стили */
+}
+@media only screen and (min-width: 360px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3){
+/* стили */
+}
