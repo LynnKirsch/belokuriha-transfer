@@ -23,14 +23,9 @@
 <body>
 
 <!-- Cookie Banner -->
-<div id="cookie-banner" aria-live="polite" style="position:fixed;left:0;right:0;bottom:16px;margin:0 auto;max-width:980px;background:#fff;padding:14px;border:1px solid #ddd;box-shadow:0 6px 18px rgba(0,0,0,.08);display:flex;align-items:center;gap:12px;font-family:system-ui,Arial;z-index:9999;border-radius:8px;">
-  <div style="flex:1;font-size:14px;color:#222">
-    Этот сайт использует <strong>cookies</strong> Яндекс.Метрики для анализа посещаемости. Данные обезличены и не позволяют идентифицировать пользователя.
-    <a href="/data-processing.html" style="margin-left:6px;color:#055">Подробнее</a>
-  </div>
-  <div style="flex:0">
-    <button id="cookie-accept" style="background:#0b5;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer">ОК</button>
-  </div>
+<div class="cookie-banner">
+    <p class="banner-text">Этот сайт использует <strong> cookies</strong> Яндекс.Метрики для анализа посещаемости. Данные обезличены и не позволяют идентифицировать пользователя.</p>
+    <button class="banner-btn">ОК</button>
 </div>
 
 <script>

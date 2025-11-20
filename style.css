@@ -983,6 +983,31 @@ text-align: center;
     margin-left: 50px;
 }
 
+.cookie-banner {
+    background-color: #f5f5f5;
+    padding: 1rem 1.5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.banner-text {
+    margin: 0 0 0.5rem 0; /* отступ снизу для кнопки */
+}
+
+.banner-btn {
+    display: block;        /* чтобы кнопка была на отдельной строке */
+    margin: 0;             /* убираем автоматические отступы */
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 .intro_inner {
 margin-top: 10rem;
 }
