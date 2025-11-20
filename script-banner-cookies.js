@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const banner = document.createElement("div");
         banner.className = "cookie-banner";
         banner.innerHTML = `
-            <p class="banner-text">Мы используем cookies для улучшения работы сайта.</p>
+            <p class="banner-text">Этот сайт использует <strong> cookies</strong> Яндекс.Метрики для анализа посещаемости. Данные обезличены и не позволяют идентифицировать пользователя.</p>
             <a href="privacy.html" class="banner-link">Подробнее</a>
             <button class="banner-btn">ОК</button>
         `;
