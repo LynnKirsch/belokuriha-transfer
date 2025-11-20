@@ -1,43 +1,78 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="трансфер белокуриха такси">
-    <meta name="description" content="Туртревел22 - заказ трансфера в Белокуриху из аэропорта Горно-Алтайска, Барнаула, Новосибирска, жд вокзала Бийска. Такси в Белокурихе, экскурсии по Горному Алтаю">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=0" />
+<meta charset="UTF-8">
+<meta name="keywords" content="трансфер белокуриха такси">
+<meta name="description" content="Туртревел22 - заказ трансфера в Белокуриху из аэропорта Горно-Алтайска, Барнаула, Новосибирска, жд вокзала Бийска. Такси в Белокурихе, экскурсии по Горному Алтаю">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=0">
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Туртревел22 - трансфер в Белокуриху, такси на курорте Белокуриха, экскурсии Алтай</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<title>Туртревел22 - трансфер в Белокуриху, такси на курорте Белокуриха, экскурсии Алтай</title>
+
+<!-- Шрифты -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;700&family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+<link href="style.css" rel="stylesheet">
 
-   ym(96254521, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/96254521" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
+<body>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" aria-live="polite" style="position:fixed;left:0;right:0;bottom:16px;margin:0 auto;max-width:980px;background:#fff;padding:14px;border:1px solid #ddd;box-shadow:0 6px 18px rgba(0,0,0,.08);display:flex;align-items:center;gap:12px;font-family:system-ui,Arial;z-index:9999;border-radius:8px;">
+  <div style="flex:1;font-size:14px;color:#222">
+    Этот сайт использует <strong>cookies</strong> Яндекс.Метрики для анализа посещаемости. Данные обезличены и не позволяют идентифицировать пользователя.
+    <a href="/data-processing.html" style="margin-left:6px;color:#055">Подробнее</a>
+  </div>
+  <div style="flex:0">
+    <button id="cookie-accept" style="background:#0b5;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer">ОК</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  function setCookie(name,value,days){
+    var d=new Date(); d.setTime(d.getTime()+ (days||365)*24*60*60*1000);
+    document.cookie = name + "=" + encodeURIComponent(value) + ";path=/;SameSite=Lax";
+  }
+  function getCookie(name){
+    var m=document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return m ? decodeURIComponent(m[2]) : null;
+  }
+
+  var banner = document.getElementById('cookie-banner');
+  var accept = document.getElementById('cookie-accept');
+
+  if (getCookie('site_cookie_agreed') === '1') { banner.style.display='none'; }
+
+  accept.addEventListener('click', function(){
+    setCookie('site_cookie_agreed','1',365);
+    banner.style.display='none';
+    
+    // Запуск Яндекс.Метрики после согласия
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0];
+      k.async=1;k.src=r;a.parentNode.insertBefore(k,a)
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(96254521, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+    });
+  });
+})();
+</script>
+<!-- /Cookie Banner -->
+
+</body>
 <body>
 <header>
     <nav class="heder">
