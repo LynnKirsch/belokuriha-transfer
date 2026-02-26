@@ -390,6 +390,41 @@ ym(96254521, "init", {
 </footer>
 <script src="script.js"></script>
 <script src="script-banner-cookies.js"></script>
+<script>
+  // Сначала получаем все карточки на странице
+  const squares = document.querySelectorAll(".square_1, .square_2, .square_3, .square_4");
+
+  // Берём данные из Directus
+  fetch("http://localhost:8055/items/transfers") // URL локального Directus
+    .then(res => res.json())
+    .then(data => {
+      const items = data.data; // массив карточек из Directus
+
+      squares.forEach((square, index) => {
+        const item = items[index]; // соответствующая карточка
+        if (!item) return; // если карточка не найдена в массиве, пропускаем
+
+        const textBlock = square.querySelector(`.${square.className}-text`);
+
+        // Обновляем заголовок города
+        const cityEl = textBlock.querySelector("h3 span.color-f");
+        if (cityEl) cityEl.textContent = item.city_name;
+
+        // Обновляем описание
+        const ps = textBlock.querySelectorAll("p.psquare");
+        if (ps[0]) ps[0].textContent = `Расстояние до г. Белокурихи: ${item.distance}`;
+        if (ps[1]) ps[1].textContent = `Время в пути: ${item.time}`;
+        if (ps[2]) ps[2].textContent = `Цена поездки:`; // оставляем статично
+
+        // Обновляем цены
+        const h3s = textBlock.querySelectorAll("h3");
+        if (h3s[1]) h3s[1].querySelector("span.color").textContent = `от ${item.prices_standard}`;
+        if (h3s[2]) h3s[2].querySelector("span.color").textContent = `от ${item.prices_comfort}`;
+        if (h3s[3]) h3s[3].querySelector("span.color").textContent = `от ${item.prices_minivan}`;
+      });
+    })
+    .catch(err => console.error("Ошибка загрузки данных из Directus:", err));
+</script>
 
 </body>
 
