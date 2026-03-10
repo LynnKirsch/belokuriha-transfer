@@ -164,7 +164,7 @@ ym(96254521, "init", {
                     <p class="psquare">Расстояние до г. Белокурихи: 230 км</p>
                     <p class="psquare">Время в пути: 3 ч. 30 мин.</p>
                     <p class="psquare">Цена поездки:</p>
-                    <h3>Класс «Стандарт»: <span class='color'>от 10 000 рублей</span></h3>
+                    <h3>Класс «Стандарт»: <span class='color'>от 13 000 рублей</span></h3>
                     <h3>Класс «Комфорт»: <span class='color'>от 13 000 рублей</span></h3>
                     <h3>Класс «Минивэн»: <span class='color'>от 18 000 рублей</span></h3>
 </div>
@@ -177,7 +177,7 @@ ym(96254521, "init", {
                     <p class="psquare">Расстояние до г. Белокурихи: 440 км</p>
                     <p class="psquare">Время в пути: 7 ч.</p>
                     <p class="psquare">Цена поездки:</p>
-                    <h3>Класс «Стандарт»: <span class='color'>от 17 000 рублей</span></h3>
+                    <h3>Класс «Стандарт»: <span class='color'>от 25 000 рублей</span></h3>
                     <h3>Класс «Комфорт»: <span class='color'>от 25 000 рублей</span></h3>
                     <h3>Класс «Минивэн»: <span class='color'>от 31 000 рублей</span></h3>
 </div>
@@ -391,39 +391,29 @@ ym(96254521, "init", {
 <script src="script.js"></script>
 <script src="script-banner-cookies.js"></script>
 <script>
-  // Сначала получаем все карточки на странице
-  const squares = document.querySelectorAll(".square_1, .square_2, .square_3, .square_4");
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".squares"); // сюда будут вставляться карточки
+  if (!container) return; // если элемент не найден, выходим
 
-  // Берём данные из Directus
-  fetch("http://localhost:8055/items/transfers") // URL локального Directus
+  fetch("http://localhost:8055/items/transfer")
     .then(res => res.json())
     .then(data => {
-      const items = data.data; // массив карточек из Directus
-
-      squares.forEach((square, index) => {
-        const item = items[index]; // соответствующая карточка
-        if (!item) return; // если карточка не найдена в массиве, пропускаем
-
-        const textBlock = square.querySelector(`.${square.className}-text`);
-
-        // Обновляем заголовок города
-        const cityEl = textBlock.querySelector("h3 span.color-f");
-        if (cityEl) cityEl.textContent = item.city_name;
-
-        // Обновляем описание
-        const ps = textBlock.querySelectorAll("p.psquare");
-        if (ps[0]) ps[0].textContent = `Расстояние до г. Белокурихи: ${item.distance}`;
-        if (ps[1]) ps[1].textContent = `Время в пути: ${item.time}`;
-        if (ps[2]) ps[2].textContent = `Цена поездки:`; // оставляем статично
-
-        // Обновляем цены
-        const h3s = textBlock.querySelectorAll("h3");
-        if (h3s[1]) h3s[1].querySelector("span.color").textContent = `от ${item.prices_standard}`;
-        if (h3s[2]) h3s[2].querySelector("span.color").textContent = `от ${item.prices_comfort}`;
-        if (h3s[3]) h3s[3].querySelector("span.color").textContent = `от ${item.prices_minivan}`;
+      data.data.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "square_card";
+        card.innerHTML = `
+          <h3>${item.city_name}</h3>
+          <p>Расстояние: ${item.distance} км</p>
+          <p>Время: ${item.time}</p>
+          <p>Класс «Стандарт»: ${item.price_standard}</p>
+          <p>Класс «Комфорт»: ${item.price_comfort}</p>
+          <p>Класс «Минивэн»: ${item.price_minivan}</p>
+        `;
+        container.appendChild(card);
       });
     })
     .catch(err => console.error("Ошибка загрузки данных из Directus:", err));
+});
 </script>
 
 </body>
