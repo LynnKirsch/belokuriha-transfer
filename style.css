@@ -210,6 +210,7 @@ position: absolute;
 
 .intro_photo {
     position: absolute;
+
 }
 
 h1 {
@@ -241,7 +242,7 @@ h2 {
 
 .slogan-text-2 {
     font-size: 32px;
-    margin-left: 450px;
+    margin-left: 300px;
 }
 
 .btn-ili {
@@ -996,7 +997,7 @@ text-align: center;
     }
 
 .slogan {
-    margin-top: 22rem;
+    margin-top: 28rem;
 }
 
 .slogan-text {
@@ -1136,13 +1137,13 @@ h3 {
 }
     
     .intro_photo {
-    top: 16rem;
+    top: 18rem;
 margin-left: auto;
 margin-right: auto;
 left: 0;
 right: 0;
 
-    width: 100%;
+    width: 80%;
 
 }
 
@@ -1478,13 +1479,13 @@ h3 {
 }
     
     .intro_photo {
-    top: 16rem;
+    top: 18rem;
 margin-left: auto;
 margin-right: auto;
 left: 0;
 right: 0;
 
-    width: 100%;
+    width: 80%;
 
 }
 
@@ -1734,7 +1735,7 @@ margin-right: auto;
 left: 0;
 right: 0;
 
-    width: 100%;
+    width: 60%;
 
 }
 
@@ -2028,12 +2029,12 @@ margin-top: 10rem;
         .intro_photo {
     top: 22rem;
     left: 0;
-    width: 100%;
+    width: 60%;
 
 }
 
 .slogan {
-    margin-top: 22rem;
+    margin-top: 26rem;
 }
 
 .slogan-text {
@@ -2294,7 +2295,7 @@ margin-top: 10rem;
         .intro_photo {
     top: 22rem;
     left: 0;
-    width: 100%;
+    width: 60%;
 
 }
 
@@ -2532,7 +2533,7 @@ text-align: center;
     .intro_photo {
         top: 22rem;
         left: 50px;
-        width: 80%;
+        width: 60%;
     }
 
     .btn-ili {
@@ -2560,7 +2561,7 @@ margin-top: 6rem;
 }
 
 .slogan {
-    margin-top: 25rem;
+    margin-top: 30rem;
 }
 
 .slogan-text {
@@ -2846,7 +2847,7 @@ text-align: center;
     .intro_photo {
         top: 22rem;
         left: 50px;
-        width: 80%;
+        width: 60%;
     }
 
     .btn-ili {
@@ -2874,7 +2875,7 @@ margin-top: 6rem;
 }
 
 .slogan {
-    margin-top: 25rem;
+    margin-top: 30rem;
 }
 
 .slogan-text {
@@ -3167,7 +3168,7 @@ margin-top: 10rem;
     .intro_photo {
     top: 10rem;
     left: 120px;
-    width: 70%;
+    width: 50%;
 }
 
 .slogan {
@@ -3182,7 +3183,7 @@ margin-top: 10rem;
 .slogan-text-2 {
     font-size: 28px;
     line-height: 1.3;
-    margin-left: 350px;
+    margin-left: 250px;
 }
 
 
@@ -3467,7 +3468,7 @@ margin-top: 10rem;
     .intro_photo {
     top: 10rem;
     left: 120px;
-    width: 70%;
+    width: 30%;
 }
 .slogan {
     margin-top: 28rem;
@@ -3778,8 +3779,8 @@ margin-top: 10rem;
 
     .intro_photo {
     top: 0;
-    right: 0;
-    width: 40%;
+    right: 60px;
+    width: 30%;
 }
 
 
@@ -4061,8 +4062,8 @@ margin-top: 10rem;
 
     .intro_photo {
     top: 0;
-    right: 0;
-    width: 40%;
+    right: 60px;
+    width: 30%;
 }
 
 
@@ -4344,8 +4345,8 @@ margin-top: 10rem;
 
     .intro_photo {
     top: 0;
-    right: 0;
-    width: 40%;
+    right: 60px;
+    width: 30%;
 }
 
 
