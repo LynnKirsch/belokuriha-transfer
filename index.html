@@ -398,33 +398,8 @@ ym(96254521, "init", {
         </div>
     </section>
 </footer>
-<script src="script.js"></script>
-<script src="script-banner-cookies.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector(".squares"); // сюда будут вставляться карточки
-  if (!container) return; // если элемент не найден, выходим
 
-  fetch("http://localhost:8055/items/transfer")
-    .then(res => res.json())
-    .then(data => {
-      data.data.forEach(item => {
-        const card = document.createElement("div");
-        card.className = "square_card";
-        card.innerHTML = `
-          <h3>${item.city_name}</h3>
-          <p>Расстояние: ${item.distance} км</p>
-          <p>Время: ${item.time}</p>
-          <p>Класс «Стандарт»: ${item.price_standard}</p>
-          <p>Класс «Комфорт»: ${item.price_comfort}</p>
-          <p>Класс «Минивэн»: ${item.price_minivan}</p>
-        `;
-        container.appendChild(card);
-      });
-    })
-    .catch(err => console.error("Ошибка загрузки данных из Directus:", err));
-});
-</script>
+<script src="script-banner-cookies.js"></script>
 
 </body>
 
