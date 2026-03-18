@@ -15,6 +15,377 @@ margin: 0;
     max-width: 100%;
 }
 
+/* =======================================================================
+   НОВЫЙ КОД ОСНОВНОЙ КОНТЕЙНЕР СЕКЦИИ
+   ======================================================================= */
+.hero-tr22 {
+  padding-top: 40px;        /* ← ВЕРХНИЙ ОТСТУП - меняйте здесь */
+  padding-bottom: 40px;      /* ← НИЖНИЙ ОТСТУП - меняйте здесь */
+  background: #f5f5f5;;
+  font-family: 'Unbounded', sans-serif;
+  overflow: hidden;
+}
+
+/* -----------------------------------------------------------------------
+   БОКОВЫЕ ОТСТУПЫ - ЖЕСТКО ПО ТЕХНИЧЕСКОМУ ЗАДАНИЮ
+   ----------------------------------------------------------------------- */
+.hero-tr22 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 480px) {
+  .hero-tr22 { padding-left: 30px; padding-right: 30px; }  /* планшеты */
+}
+
+@media (min-width: 1200px) {
+  .hero-tr22 { padding-left: 60px; padding-right: 60px; }  /* десктопы */
+}
+
+@media (min-width: 1920px) {
+  .hero-tr22 { padding-left: 90px; padding-right: 90px; }  /* огромные экраны */
+}
+
+/* =======================================================================
+   ВНУТРЕННИЙ КОНТЕЙНЕР (ОГРАНИЧИВАЕТ ШИРИНУ КОНТЕНТА)
+   ======================================================================= */
+.hero-tr22__wrap {
+  max-width: 1440px;                    /* стандартная ширина */
+  margin: 0 auto;                        /* центрирование */
+  display: flex;
+  align-items: center;
+  gap: clamp(40px, 5vw, 80px);          /* адаптивный отступ между колонками */
+}
+
+@media (min-width: 1600px) { 
+  .hero-tr22__wrap { max-width: 1600px; } /* чуть шире на больших экранах */
+}
+
+@media (min-width: 1920px) { 
+  .hero-tr22__wrap { max-width: 1800px; } /* ещё шире на огромных */
+}
+
+/* =======================================================================
+   ЛЕВАЯ КОЛОНКА - ТЕКСТОВЫЙ БЛОК
+   ======================================================================= */
+.hero-tr22__left { 
+  flex: 1;                              /* занимает 1 часть пропорции */
+  max-width: 650px;                     /* ограничение ширины текста */
+}
+
+.hero-tr22__title { 
+  font-size: clamp(32px, 4vw, 68px);  /* адаптивный размер */
+  font-weight: 700; 
+  line-height: 1.15; 
+  color: #1F2A3A; 
+  margin-bottom: 30px; 
+}
+
+.hero-tr22__note { 
+  font-size: clamp(19px, 1.7vw, 24px);  /* адаптивный размер */
+  background: linear-gradient(135deg, #667EEA, #764BA2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  line-height: 1.5; 
+}
+/* =======================================================================
+   КНОПКИ - ГРАДИЕНТ #667EEA → #764BA2
+   ======================================================================= */
+.hero-tr22__switch {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.hero-tr22__btn {
+  padding: 16px 32px;
+  border-radius: 999px;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  white-space: nowrap;
+}
+
+/* БЛИК для всех кнопок */
+.hero-tr22__btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+
+.hero-tr22__btn:hover::before {
+  transform: translateX(100%);
+}
+
+/* ГРАДИЕНТНАЯ КНОПКА (ОСНОВНАЯ) */
+.hero-tr22__btn--primary {
+  background: linear-gradient(135deg, #667EEA, #764BA2);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.hero-tr22__btn--primary:hover {
+  background: linear-gradient(135deg, #5a6fd6, #6a4294);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+}
+
+/* ПРОЗРАЧНАЯ КНОПКА */
+.hero-tr22__btn--ghost {
+  background: transparent;
+  border: 2px solid #667EEA;
+  color: #1F2A3A;
+}
+
+.hero-tr22__btn--ghost:hover {
+  background: rgba(102, 126, 234, 0.05);
+  border-color: #764BA2;
+  color: #764BA2;
+}
+
+/* =======================================================================
+   ПРАВАЯ КОЛОНКА - КАРТИНКА
+   ======================================================================= */
+.hero-tr22__right {
+  flex: 1;                               /* занимает 1 часть пропорции */
+  position: relative;
+  min-width: 0;                          /* важно для flex-сжатия */
+  margin: 0;
+  padding: 0;
+}
+
+/* КОНТЕЙНЕР КАРТИНКИ С ПОВОРОТОМ */
+.hero-tr22__image-box {
+  position: relative;
+  border-radius: 40px;                    /* скругление углов */
+  overflow: hidden;                       /* обрезаем всё лишнее */
+  width: 100%;
+  height: auto;
+  transform: rotate(2deg);                 /* легкий поворот */
+  transform-origin: center center;
+  max-width: calc(100% - 20px);            /* компенсация поворота */
+  margin: 0 auto;                          /* центрируем */
+}
+
+/* САМА КАРТИНКА (фоновая) */
+.hero-tr22__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-image: url("https://static.tildacdn.com/tild3339-3832-4034-b034-313234383032/photo.webp");
+  background-size: cover;
+  background-position: center;
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+
+/* ПРОПОРЦИИ КАРТИНКИ через псевдоэлемент */
+.hero-tr22__image::before {
+  content: "";
+  display: block;
+  padding-bottom: 75%; /* 4:3 aspect ratio (3/4 = 0.75) - по умолчанию */
+}
+
+/* =======================================================================
+   ГРАДИЕНТ ПОВЕРХ КАРТИНКИ (затемнение)
+   ======================================================================= */
+.hero-tr22__image-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background: linear-gradient(
+    145deg,
+    rgba(25, 25, 45, 0.75) 0%,
+    rgba(25, 25, 45, 0.4) 40%,
+    rgba(25, 25, 45, 0.1) 80%,
+    rgba(25, 25, 45, 0) 100%
+  );
+  z-index: 2;
+  transition: opacity 0.5s ease;
+  pointer-events: none;                    /* не мешает кликам */
+}
+
+.hero-tr22__image-box:hover::after {
+  opacity: 0.85;                           /* чуть светлее при наведении */
+}
+
+/* =======================================================================
+   СВЕЧЕНИЕ (GLOW) ВОКРУГ КАРТИНКИ
+   ======================================================================= */
+.hero-tr22__image-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 50%,
+    rgba(100, 110, 255, 0.25) 0%,
+    rgba(100, 110, 255, 0.1) 50%,
+    transparent 80%);
+  filter: blur(40px);
+  z-index: 1;
+  opacity: 0.5;
+  transition: opacity 0.8s ease;
+  border-radius: 40px;
+  pointer-events: none;
+  transform: scale(1.1);                    /* свечение чуть больше картинки */
+}
+
+.hero-tr22__image-box:hover::before {
+  opacity: 0.7;                              /* ярче при наведении */
+}
+
+/* =======================================================================
+   АНИМАЦИЯ ПОЯВЛЕНИЯ ПРИ ЗАГРУЗКЕ
+   ======================================================================= */
+.hero-tr22__anim {
+  opacity: 0;
+  transform: translateY(50px);               /* старт со смещением вниз */
+  animation: heroFade 1s ease forwards;
+}
+
+.hero-tr22__anim--delay { 
+  animation-delay: 0.3s;                      /* задержка для правой колонки */
+}
+
+@keyframes heroFade {
+  to { 
+    opacity: 1; 
+    transform: translateY(0);                 /* финиш на месте */
+  }
+}
+
+/* =======================================================================
+   АДАПТИВНЫЕ НАСТРОЙКИ - ПО ВСЕМ ЭКРАНАМ
+   ======================================================================= */
+
+/* -----------------------------------------------------------------------
+   БОЛЬШИЕ ЭКРАНЫ (ОТ 1920PX) - БОЛЕЕ ШИРОКАЯ КАРТИНКА
+   ----------------------------------------------------------------------- */
+@media (min-width: 1920px) {
+  .hero-tr22__image::before {
+    padding-bottom: 65%; /* меняем пропорции - картинка шире (1:1.54) */
+  }
+  
+  .hero-tr22__image-box {
+    max-width: calc(100% - 30px);
+    transform: rotate(1.5deg);                /* чуть меньше поворот */
+  }
+  
+  .hero-tr22__right {
+    flex: 1.1;                                 /* правая колонка чуть шире */
+  }
+  
+  .hero-tr22__left {
+    max-width: 700px;                          /* левая колонка тоже шире */
+  }
+  
+  .hero-tr22__title {
+    font-size: 72px;                           /* крупнее заголовок */
+  }
+}
+
+/* -----------------------------------------------------------------------
+   СВЕРХБОЛЬШИЕ ЭКРАНЫ (ОТ 2200PX)
+   ----------------------------------------------------------------------- */
+@media (min-width: 2200px) {
+  .hero-tr22__image::before {
+    padding-bottom: 60%; /* ещё более широкая картинка */
+  }
+}
+
+/* -----------------------------------------------------------------------
+   МОБИЛЬНЫЕ - УБИРАЕМ ПОВОРОТ КАРТИНКИ
+   ----------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .hero-tr22__image-box {
+    transform: none;                           /* отключаем поворот */
+    max-width: 100%;                           /* на всю ширину */
+    margin: 0;
+  }
+  .hero-tr22__image-box::before {
+    transform: scale(1.1);                      /* свечение оставляем */
+  }
+}
+
+/* -----------------------------------------------------------------------
+   СРЕДНИЕ ЭКРАНЫ (1024-1199)
+   ----------------------------------------------------------------------- */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .hero-tr22__image-box {
+    transform: rotate(1.5deg);                  /* уменьшенный поворот */
+    max-width: calc(100% - 15px);
+  }
+}
+
+/* -----------------------------------------------------------------------
+   ДЕСКТОПЫ СРЕДНИЕ (1200-1399)
+   ----------------------------------------------------------------------- */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .hero-tr22__image-box {
+    max-width: calc(100% - 25px);
+  }
+}
+
+/* -----------------------------------------------------------------------
+   АДАПТИВ ЗАГОЛОВКА И ТЕКСТА
+   ----------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .hero-tr22__title { font-size: 48px; }
+}
+
+@media (max-width: 900px) {
+  .hero-tr22__wrap {
+    flex-direction: column;                     /* колонки друг под другом */
+    text-align: center;
+    gap: 50px;
+  }
+  .hero-tr22__left { max-width: 100%; }
+  .hero-tr22__switch { justify-content: center; } /* центрируем кнопки */
+  .hero-tr22__right {
+    width: 100%;
+    max-width: 600px;                           /* ограничение на моб. */
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-tr22__title { font-size: 42px; }
+}
+
+@media (max-width: 480px) {
+  .hero-tr22__title { font-size: 32px; }
+  .hero-tr22__note { font-size: 20px; }
+  .hero-tr22__btn {
+    padding: 15px 25px;                          /* чуть меньше кнопки */
+    font-size: 16px;
+  }
+  .hero-tr22__right {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+/* -----------------------------------------------------------------------
+   КОНЕЦ НОВОГО КОДА
+   ----------------------------------------------------------------------- */
 .logo_img {
     width: 100%;
     margin: 20px 0 0 10px;
