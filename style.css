@@ -74,7 +74,7 @@ margin: 0;
 }
 
 .hero-tr22__title { 
-  font-size: clamp(32px, 4vw, 68px);  /* адаптивный размер */
+  font-size: clamp(32px, 3.6vw, 68px);  /* адаптивный размер */
   font-weight: 700; 
   line-height: 1.15; 
   color: #1F2A3A; 
