@@ -30,7 +30,8 @@ margin: 0;
    БОКОВЫЕ ОТСТУПЫ - ЖЕСТКО ПО ТЕХНИЧЕСКОМУ ЗАДАНИЮ
    ----------------------------------------------------------------------- */
 .hero-tr22 {
-  padding: 140px 15px 0 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media (min-width: 480px) {
@@ -297,7 +298,7 @@ margin: 0;
   }
   
   .hero-tr22__title {
-    font-size: 72px;                           /* крупнее заголовок */
+    font-size: 68px;                           /* крупнее заголовок */
   }
 }
 
@@ -351,6 +352,11 @@ margin: 0;
 }
 
 @media (max-width: 900px) {
+
+    .hero-tr22 {
+  padding-top: 140px;                          /* отступ контейнера на мобильном */
+}
+
   .hero-tr22__wrap {
     flex-direction: column;                     /* колонки друг под другом */
     text-align: center;
@@ -370,6 +376,7 @@ margin: 0;
 }
 
 @media (max-width: 480px) {
+
   .hero-tr22__title { font-size: 32px; }
   .hero-tr22__note { font-size: 20px; }
   .hero-tr22__btn {
